@@ -1,0 +1,596 @@
+{
+    "users": [
+        {
+            "id": 1, 
+            "name": "Logan Curtis", 
+            "email": "logan@curtis.com"
+        }
+    ],
+
+    "strategies": [
+        {
+            "id": 1,
+            "mapId": 1,
+            "img": "",
+            "siteId": 1,
+            "userId": 1
+        }
+    ],
+
+    "maps": [
+        {
+            "id": 1,
+            "name": "Bank", 
+            "img":  "bankHome.jpg"
+        },
+        {
+            "id": 2, 
+            "name": "Chalet",
+            "img": "chaletHome.jpg"
+        },
+        {
+            "id": 3, 
+            "name": "Clubhouse",
+            "img": "clubhouseHome.jpg"
+        }, 
+        {
+            "id": 4,
+            "name": "Coastline",
+            "img": "coastlineHome.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Consulate",
+            "img": "consulateHome.jpg"
+        }, 
+        {
+            "id": 6, 
+            "name": "Kafe",
+            "img": "kafeHome.jpg"
+        },
+        {
+            "id": 7, 
+            "name": "Oregon",
+            "img": "oregonHome.jpg"
+        },
+        {
+            "id": 8, 
+            "name": "Theme Park",
+            "img": "themeParkHome.jpg"
+        },
+        {
+            "id": 9, 
+            "name": "Kanal",
+            "img": "kanalHome.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Border",
+            "img": "borderHome.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Villa",
+            "img": "villaHome.jpg"
+        }
+    ],
+
+    "sites": [
+        {
+            "id": 1, 
+            "name": "Basement",
+            "blueprint": "BankBasement.jpg",
+            "mapId": 1 
+        },
+        {
+            "id": 2, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 1 
+        },
+        {
+            "id": 3, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 1 
+        },
+        {
+            "id": 4, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 2 
+        },
+        {
+            "id": 5, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 2 
+        },
+        {
+            "id": 6, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 2 
+        },
+        {
+            "id": 7, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 3 
+        },
+        {
+            "id": 8, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 3 
+        },
+        {
+            "id": 9, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 3 
+        },
+        {
+            "id": 10, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 4 
+        },
+        {
+            "id": 11, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 4 
+        },
+        {
+            "id": 12, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 4 
+        },
+        {
+            "id": 13, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 5 
+        },
+        {
+            "id": 14, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 5 
+        },
+        {
+            "id": 15, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 5 
+        },
+        {
+            "id": 16, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 6 
+        },
+        {
+            "id": 17, 
+            "name": "FirstFloor",
+            "blueprint": "",
+            "mapId": 6 
+        },
+        {
+            "id": 18, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 6 
+        },
+        {
+            "id": 19, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 7 
+        },
+        {
+            "id": 20, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 7 
+        },
+        {
+            "id": 21, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 8
+        },
+        {
+            "id": 22, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 8
+        },
+        {
+            "id": 23, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 9
+        },
+        {
+            "id": 24, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 9
+        },
+        {
+            "id": 25, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 9
+        },
+        {
+            "id": 26, 
+            "name": "FistFloor",
+            "blueprint": "",
+            "mapId": 10
+        },
+        {
+            "id": 27, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 10
+        },
+        {
+            "id": 28, 
+            "name": "Basement",
+            "blueprint": "",
+            "mapId": 11
+        },
+        {
+            "id": 29, 
+            "name": "GroundFloor",
+            "blueprint": "",
+            "mapId": 11
+        },
+        {
+            "id": 30, 
+            "name": "TopFloor",
+            "blueprint": "",
+            "mapId": 11
+        }
+    ],
+    
+    "operators": [
+        {
+            "id": 1, 
+            "name": "Sledge",
+            "side": 1 
+        },
+        {
+            "id": 2,
+            "name": "Thatcher",
+            "side": 1
+        },
+        {
+            "id": 3,
+            "name": "Ash",
+            "side": 1
+        },
+        {
+            "id": 4,
+            "name": "Thermite",
+            "side": 1
+        },
+        {
+            "id": 5,
+            "name": "Twitch",
+            "side": 1
+        },
+        {
+            "id": 6,
+            "name": "Montagne",
+            "side": 1
+        },
+        {
+            "id": 7,
+            "name": "Glaz",
+            "side": 1
+        },
+        {
+            "id": 8,
+            "name": "Fuze",
+            "side": 1
+        },
+        {
+            "id": 9,
+            "name": "Blitz",
+            "side": 1
+        },
+        {
+            "id": 10,
+            "name": "IQ",
+            "side": 1
+        },
+        {
+            "id": 11,
+            "name": "Buck",
+            "side": 1
+        },
+        {
+            "id": 12,
+            "name": "Blackbeard",
+            "side": 1
+        },
+        {
+            "id": 13,
+            "name": "Capitão",
+            "side": 1
+        },
+        {
+            "id": 14,
+            "name": "Hibana",
+            "side": 1
+        },
+        {
+            "id": 15,
+            "name": "Jackal",
+            "side": 1
+        },
+        {
+            "id": 16,
+            "name": "Ying",
+            "side": 1
+        },
+        {
+            "id": 17,
+            "name": "Zofia",
+            "side": 1
+        },
+        {
+            "id": 18,
+            "name": "Dokkaebi",
+            "side": 1
+        },
+        {
+            "id": 19,
+            "name": "Lion",
+            "side": 1
+        },
+        {
+            "id": 20,
+            "name": "Finka",
+            "side": 1
+        },
+        {
+            "id": 21,
+            "name": "Maverick",
+            "side": 1
+        },
+        {
+            "id": 22,
+            "name": "Nomad",
+            "side": 1
+        },
+        {
+            "id": 23,
+            "name": "Gridlock",
+            "side": 1
+        },
+        {
+            "id": 24,
+            "name": "Nøkk",
+            "side": 1
+        },
+        {
+            "id": 25,
+            "name": "Amaru",
+            "side": 1
+        },
+        {
+            "id": 26,
+            "name": "Kali",
+            "side": 1
+        },
+        {
+            "id": 27,
+            "name": "Iana",
+            "side": 1
+        },
+        {
+            "id": 28,
+            "name": "Ace",
+            "side": 1
+        },
+        {
+            "id": 29,
+            "name": "Zero",
+            "side": 1
+        },
+        {
+            "id": 30,
+            "name": "Flores",
+            "side": 1
+        },
+        {
+            "id": 31,
+            "name": "Smoke",
+            "side": 2
+        },
+        {
+            "id": 32,
+            "name": "Mute",
+            "side": 2
+        },
+        {
+            "id": 33,
+            "name": "Castle",
+            "side": 2
+        },
+        {
+            "id": 34,
+            "name": "Pulse",
+            "side": 2
+        },
+        {
+            "id": 35,
+            "name": "Doc",
+            "side": 2
+        },
+        {
+            "id": 36,
+            "name": "Rook",
+            "side": 2
+        },
+        {
+            "id": 37,
+            "name": "KapKan",
+            "side": 2
+        },
+        {
+            "id": 38,
+            "name": "Tachanka",
+            "side": 2
+        },
+        {
+            "id": 39,
+            "name": "Jäger",
+            "side": 2
+        },
+        {
+            "id": 40,
+            "name": "Bandit",
+            "side": 2
+        },
+        {
+            "id": 41,
+            "name": "Frost",
+            "side": 2
+        },
+        {
+            "id": 42,
+            "name": "Valkyrie",
+            "side": 2
+        },
+        {
+            "id": 43,
+            "name": "Caveira",
+            "side": 2
+        },
+        {
+            "id": 44,
+            "name": "Echo",
+            "side": 2
+        },
+        {
+            "id": 45,
+            "name": "Mira",
+            "side": 2
+        },
+        {
+            "id": 46,
+            "name": "Lesion",
+            "side": 2
+        },
+        {
+            "id": 47,
+            "name": "Ela",
+            "side": 2
+        },
+        {
+            "id": 48,
+            "name": "Vigil",
+            "side": 2
+        },
+        {
+            "id": 49,
+            "name": "Maestro",
+            "side": 2
+        },
+        {
+            "id": 50,
+            "name": "Alibi",
+            "side": 2
+        },
+        {
+            "id": 51,
+            "name": "Clash",
+            "side": 2
+        },
+        {
+            "id": 52,
+            "name": "Kaid",
+            "side": 2
+        },
+        {
+            "id": 53,
+            "name": "Mozzie",
+            "side": 2
+        },
+        {
+            "id": 54,
+            "name": "Warden",
+            "side": 2
+        },
+        {
+            "id": 55,
+            "name": "Goyo",
+            "side": 2
+        },
+        {
+            "id": 56,
+            "name": "Wamai",
+            "side": 2
+        },
+        {
+            "id": 57,
+            "name": "Oryx",
+            "side": 2
+        },
+        {
+            "id": 58,
+            "name": "Melusi",
+            "side": 2
+        },
+        {
+            "id": 59,
+            "name": "Aruni",
+            "side": 2
+        },
+        {
+            "id": 60,
+            "name": "ThunderBird",
+            "side": 2
+        }
+    ],
+
+    "selectedOps": [
+        {
+            "id": 1,
+            "role": "",
+            "opsId": 1, 
+            "strategiesId": 1
+        },
+        {
+            "id": 2,
+            "role": "",
+            "opsId": 2, 
+            "strategiesId": 1
+        },
+        {
+            "id": 3,
+            "role": "",
+            "opsId": 3, 
+            "strategiesId": 1
+        },
+        {
+            "id": 4,
+            "role": "",
+            "opsId": 4, 
+            "strategiesId": 1
+        },
+        {
+            "id": 5,
+            "role": "",
+            "opsId": 5, 
+            "strategiesId": 1
+        }
+    ]
+}

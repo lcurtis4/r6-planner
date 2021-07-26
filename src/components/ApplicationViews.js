@@ -1,6 +1,5 @@
 //import { R6Planner } from "./r6Planner"
 
-
 export const ApplicationViews = () => {
     return(
         <>
