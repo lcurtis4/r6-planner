@@ -85,175 +85,175 @@
         {
             "id": 2, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "BankGroundFloor.jpg",
             "mapId": 1 
         },
         {
             "id": 3, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "BankTopFloor.jpg",
             "mapId": 1 
         },
         {
             "id": 4, 
             "name": "Basement",
-            "blueprint": "",
+            "blueprint": "ChaletRWBasement.jpg",
             "mapId": 2 
         },
         {
             "id": 5, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "ChaletRWGroundFloor.jpg",
             "mapId": 2 
         },
         {
             "id": 6, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "ChaletRWTopFloor.jpg",
             "mapId": 2 
         },
         {
             "id": 7, 
             "name": "Basement",
-            "blueprint": "",
+            "blueprint": "ClubHouseBasement.jpg",
             "mapId": 3 
         },
         {
             "id": 8, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "ClubHouseGroundFloor.jpg",
             "mapId": 3 
         },
         {
             "id": 9, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "CLubHouseTopFloor.jpg",
             "mapId": 3 
         },
         {
             "id": 10, 
-            "name": "Basement",
-            "blueprint": "",
+            "name": "GroundFloor",
+            "blueprint": "CoastlineGroundFloor.jpg",
             "mapId": 4 
         },
         {
             "id": 11, 
-            "name": "GroundFloor",
-            "blueprint": "",
+            "name": "TopFloor",
+            "blueprint": "CoastlineTopFloor.jpg",
             "mapId": 4 
         },
         {
             "id": 12, 
-            "name": "TopFloor",
-            "blueprint": "",
-            "mapId": 4 
+            "name": "Basement",
+            "blueprint": "ConsulateBasement.jpg",
+            "mapId": 5 
         },
         {
             "id": 13, 
-            "name": "Basement",
-            "blueprint": "",
+            "name": "GroundFloor",
+            "blueprint": "ConsulateGroundFloor.jpg",
             "mapId": 5 
         },
         {
             "id": 14, 
-            "name": "GroundFloor",
-            "blueprint": "",
+            "name": "TopFloor",
+            "blueprint": "ConsulateTopFloor.jpg",
             "mapId": 5 
         },
         {
             "id": 15, 
-            "name": "TopFloor",
-            "blueprint": "",
-            "mapId": 5 
+            "name": "GroundFloor",
+            "blueprint": "KafeGroundFloor.jpg",
+            "mapId": 6 
         },
         {
             "id": 16, 
-            "name": "GroundFloor",
-            "blueprint": "",
+            "name": "FirstFloor",
+            "blueprint": "KafeMiddleFloor.jpg",
             "mapId": 6 
         },
         {
             "id": 17, 
-            "name": "FirstFloor",
-            "blueprint": "",
+            "name": "TopFloor",
+            "blueprint": "KafeTopFloor.jpg",
             "mapId": 6 
         },
         {
             "id": 18, 
-            "name": "TopFloor",
-            "blueprint": "",
-            "mapId": 6 
+            "name": "Basement",
+            "blueprint": "OregonRWBasement.jpg",
+            "mapId": 7 
         },
         {
             "id": 19, 
-            "name": "Basement",
-            "blueprint": "",
+            "name": "GroundFloor",
+            "blueprint": "OregonRWGroundFloor.jpg",
             "mapId": 7 
         },
         {
-            "id": 20, 
-            "name": "GroundFloor",
-            "blueprint": "",
-            "mapId": 7 
+            "id": 20,
+            "name": "TopFloor",
+            "blueprint": "OregonRWTopFloor.jpg",
+            "mapId": 7
         },
         {
             "id": 21, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "ThemeparkGroundFloor.jpg",
             "mapId": 8
         },
         {
             "id": 22, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "ThemeparkTopFloor.jpg",
             "mapId": 8
         },
         {
             "id": 23, 
             "name": "Basement",
-            "blueprint": "",
+            "blueprint": "KanalBottomFloor.jpg",
             "mapId": 9
         },
         {
             "id": 24, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "KanalGroundFloor.jpg",
             "mapId": 9
         },
         {
             "id": 25, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "KanlaTopFloor.jpg",
             "mapId": 9
         },
         {
             "id": 26, 
             "name": "FistFloor",
-            "blueprint": "",
+            "blueprint": "BorderFirstFloor.jph",
             "mapId": 10
         },
         {
             "id": 27, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "BorderTopFloor.jpg",
             "mapId": 10
         },
         {
             "id": 28, 
             "name": "Basement",
-            "blueprint": "",
+            "blueprint": "VillaBasement.jpg",
             "mapId": 11
         },
         {
             "id": 29, 
             "name": "GroundFloor",
-            "blueprint": "",
+            "blueprint": "VillaGroundFloor.jpg",
             "mapId": 11
         },
         {
             "id": 30, 
             "name": "TopFloor",
-            "blueprint": "",
+            "blueprint": "VillaTopFloor.jpg",
             "mapId": 11
         }
     ],
