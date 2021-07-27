@@ -4,6 +4,11 @@
             "id": 1, 
             "name": "Logan Curtis", 
             "email": "logan@curtis.com"
+        },
+        {
+            "id": 2, 
+            "name": "Logan Curtis", 
+            "email": "test@curtis.com"
         }
     ],
 
