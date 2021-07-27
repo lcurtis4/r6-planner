@@ -1,9 +1,16 @@
 //import { R6Planner } from "./r6Planner"
+import { MapProvider  } from "./providers/mapProvider"
+import { StrategyProvider } from "./providers/stratProvider"
+import { StratForm } from "./strat/stratForm"
 
 export const ApplicationViews = () => {
     return(
         <>
-                {console.log("Hello, World!")}
+        <StrategyProvider>
+            <MapProvider>
+                    <StratForm/>
+            </MapProvider>
+        </StrategyProvider>
         </>
     )
 }
