@@ -233,7 +233,7 @@
         },
         {
             "id": 26, 
-            "name": "FistFloor",
+            "name": "FirstFloor",
             "blueprint": "BorderFirstFloor.jph",
             "mapId": 10
         },

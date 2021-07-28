@@ -10,6 +10,7 @@ export const StratForm = () => {
     const { addStrategies, updateStrategies, getStrategies, getStrategiesById } = useContext(StrategyContext)
     const { maps, getMaps, getMapsById } = useContext(MapContext)
     const { sites, getSites, getSitesById } = useContext(SiteContext)
+    console.log(sites)
     // const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
@@ -21,10 +22,12 @@ export const StratForm = () => {
     });
 
     const [foundMap, setFoundMap] = useState({})
+    console.log(foundMap)
 
     useEffect(() => {
         getStrategies()
         .then(getMaps())
+        .then(getSites())
         // .then(getOperators())
     }, [])
 
@@ -42,11 +45,11 @@ export const StratForm = () => {
         //     newStrategy[event.target.id] = selectedVal
         //     setStrategies(newStrategy)
         // }
-
+        
         const handleSelectedMap = (event) => {
             const newStrategy = { ...strategy }
             let selectedMap = event.target.value
-
+            
             if (event.target.id.includes("Id")) {
                 selectedMap = parseInt(selectedMap)
             }
@@ -55,7 +58,6 @@ export const StratForm = () => {
             
             const foundMap = maps.find(m => newStrategy.mapId === m.id)
             setFoundMap(foundMap)
-            console.log(foundMap)
         }
 
     return (
@@ -83,7 +85,12 @@ export const StratForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="siteSelection">Choose a Site:</label>
-                    <button type="radio" value="" name="">Basement</button> 
+                    {sites.map(s => {
+                        if (s.mapId === foundMap.id) {
+                            return <button type="radio" value={s.id} name={s.name}>{s.name} </button> 
+                        }
+                    })}
+                    
                 </div>
             </fieldset>
         </form>
