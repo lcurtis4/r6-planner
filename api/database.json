@@ -26,57 +26,57 @@
         {
             "id": 1,
             "name": "Bank", 
-            "img":  "bankHome.jpg"
+            "img": "images/Bank/bankHome.jpg"
         },
         {
             "id": 2, 
             "name": "Chalet",
-            "img": "chaletHome.jpg"
+            "img": "images/Chalet/chaletHome.jpg"
         },
         {
             "id": 3, 
             "name": "Clubhouse",
-            "img": "clubhouseHome.jpg"
+            "img": "images/Clubhouse/clubhouseHome.jpg"
         }, 
         {
             "id": 4,
             "name": "Coastline",
-            "img": "coastlineHome.jpg"
+            "img": "images/Coastline/coastlineHome.jpg"
         },
         {
             "id": 5,
             "name": "Consulate",
-            "img": "consulateHome.jpg"
+            "img": "images/Consulate/consulateHome.jpg"
         }, 
         {
             "id": 6, 
             "name": "Kafe",
-            "img": "kafeHome.jpg"
+            "img": "images/Kafe/kafeHome.jpg"
         },
         {
             "id": 7, 
             "name": "Oregon",
-            "img": "oregonHome.jpg"
+            "img": "images/Oregon/oregonHome.jpg"
         },
         {
             "id": 8, 
             "name": "Theme Park",
-            "img": "themeParkHome.jpg"
+            "img": "images/Themepark/themeParkHome.jpg"
         },
         {
             "id": 9, 
             "name": "Kanal",
-            "img": "kanalHome.jpg"
+            "img": "images/Kanal/kanalHome.jpg"
         },
         {
             "id": 10,
             "name": "Border",
-            "img": "borderHome.jpg"
+            "img": "images/Border/borderHome.jpg"
         },
         {
             "id": 11,
             "name": "Villa",
-            "img": "villaHome.jpg"
+            "img": "images/Villa/villaHome.jpg"
         }
     ],
 
