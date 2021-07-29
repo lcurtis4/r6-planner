@@ -10,8 +10,7 @@ export const StratForm = () => {
     const { addStrategies, updateStrategies, getStrategies, getStrategiesById } = useContext(StrategyContext)
     const { maps, getMaps, getMapsById } = useContext(MapContext)
     const { sites, getSites, getSitesById } = useContext(SiteContext)
-    console.log(sites)
-    // const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
+    const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "", 
@@ -22,13 +21,12 @@ export const StratForm = () => {
     });
 
     const [foundMap, setFoundMap] = useState({})
-    console.log(foundMap)
 
     useEffect(() => {
         getStrategies()
         .then(getMaps())
         .then(getSites())
-        // .then(getOperators())
+        .then(getOperators())
     }, [])
 
     const [isLoading, setIsLoading] = useState(true) 
@@ -78,11 +76,6 @@ export const StratForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="selectedMapImg">
-                    {foundMap ? <img className="selectedMap" src={foundMap.img}  alt=""/> : "" } 
-                </div>
-            </fieldset>
-            <fieldset>
                 <div className="form-group">
                     <label htmlFor="siteSelection">Choose a Site:</label>
                     {sites.map(s => {
@@ -91,6 +84,23 @@ export const StratForm = () => {
                         }
                     })}
                     
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="selectedMapImg">
+                    {foundMap ? <img className="selectedMap" src={foundMap.img}  alt=""/> : "" } 
+                </div>
+            </fieldset>
+            <fieldset> 
+                <div className="form-group">
+                    <label htmlFor="operatorSide">Atk Strategy or Def</label>
+                    <button type="radio" value="" name="">ATK</button>
+                    <button type="radio" value="" name="">DEF</button>
+                        <div className="operators">
+                        {operators.map(o => {
+                            return <button type="radio" value={o.id} name={o.name}>{o.name}</button> 
+                        })}
+                        </div>
                 </div>
             </fieldset>
         </form>
