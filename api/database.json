@@ -150,7 +150,7 @@
         {
             "id": 12, 
             "name": "Basement",
-            "blueprint": "images/Coastline/ConsulateBasement.jpg",
+            "blueprint": "images/Consulate/ConsulateBasement.jpg",
             "mapId": 5 
         },
         {
@@ -406,7 +406,7 @@
             "id": 24,
             "name": "Nøkk",
             "side": 1,
-            "img": "images/icons/nook.png"
+            "img": "images/icons/nokk.png"
         },
         {
             "id": 25,
