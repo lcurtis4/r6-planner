@@ -14,12 +14,17 @@ export const StratForm = () => {
     const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
-        mapId: "", 
-        img: "", 
+        mapId: "",  
         siteId: "",
         userId: "",
+        sideId: "",
     });
+
+    const [selectedOp, setSelectedOp] = useState([])
+    const [selectedOps, setSelectedOps] = useState([])
+
     const newStrategy = { ...strategy }
+    console.log(newStrategy)
 
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
@@ -46,11 +51,12 @@ export const StratForm = () => {
         //     setStrategies(newStrategy)
         // }
         
+        
         const handleSelectedMap = (event) => {
             event.preventDefault()
             let selectedMap = event.target.value
             
-            if (event.target.id.includes("Id")) {
+            if (event.target.id.includes("mapId")) {
                 selectedMap = parseInt(selectedMap)
             }
             newStrategy[event.target.id] = selectedMap
@@ -59,7 +65,7 @@ export const StratForm = () => {
             const foundMap = maps.find(m => newStrategy.mapId === m.id)
             setFoundMap(foundMap)
         }
-
+        
         const handleSelectedSite = (event) => {
             event.preventDefault()
             let selectedSite = event.target.value
@@ -72,6 +78,17 @@ export const StratForm = () => {
             
             const foundSite = sites.find(s => newStrategy.siteId === s.id)
             setFoundSite(foundSite)
+        }
+        
+        const handleSelectedSide = (event) => {
+            event.preventDefault()
+            let selectedSide = event.target.value
+            
+            if (event.target.id.includes("sideId")) {
+                selectedSide = parseInt(selectedSide)
+            }
+            newStrategy[event.target.id] = selectedSide
+            setStrategies(newStrategy)
         }
 
     return (
@@ -112,16 +129,15 @@ export const StratForm = () => {
                     {foundSite ? <img className="selectedSite" src={foundSite.blueprint}  alt=""/> : "" } 
                 </div>
             </fieldset>
-                    
-
             <fieldset> 
                 <div className="form-group">
                     <label htmlFor="operatorSide">Atk Strategy or Def</label>
-                    <button type="radio" value="" name="side">ATK</button>
-                    <button type="radio" value="" name="side">DEF</button>
+                    <button type="radio" value="1" name="sideId" id="sideId" onClick={handleSelectedSide}>ATK</button>
+                    <button type="radio" value="2" name="sideId" id="sideId" onClick={handleSelectedSide}>DEF</button>
                         <div className="operators">
                         {operators.map(o => {
-                            return <button type="radio" value={o.id} name={o.name}>{o.name}</button> 
+                            if (o.side === newStrategy.sideId)
+                            return <button><img src={o.img} alt={o.name} className="opIcon" /></button> //<button type="radio" value={o.id} name={o.name}>{o.name}</button> 
                         })}
                         </div>
                 </div>
@@ -129,3 +145,4 @@ export const StratForm = () => {
         </form>
     )
 }
+
