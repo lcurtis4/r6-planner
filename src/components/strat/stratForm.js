@@ -5,30 +5,30 @@ import { MapContext } from "../providers/mapProvider"
 import { useParams } from "react-router-dom"
 import { OperatorContext } from "../providers/operatorProvider"
 import { SiteContext } from "../providers/siteProvider"
+import "./form.css"
 
 export const StratForm = () => {
     const { addStrategies, updateStrategies, getStrategies, getStrategiesById } = useContext(StrategyContext)
     const { maps, getMaps, getMapsById } = useContext(MapContext)
     const { sites, getSites, getSitesById } = useContext(SiteContext)
-    console.log(sites)
-    // const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
+    const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "", 
         img: "", 
         siteId: "",
         userId: "",
-
     });
+    const newStrategy = { ...strategy }
 
     const [foundMap, setFoundMap] = useState({})
-    console.log(foundMap)
+    const [foundSite, setFoundSite] = useState({})
 
     useEffect(() => {
         getStrategies()
         .then(getMaps())
         .then(getSites())
-        // .then(getOperators())
+        .then(getOperators())
     }, [])
 
     const [isLoading, setIsLoading] = useState(true) 
@@ -47,7 +47,7 @@ export const StratForm = () => {
         // }
         
         const handleSelectedMap = (event) => {
-            const newStrategy = { ...strategy }
+            event.preventDefault()
             let selectedMap = event.target.value
             
             if (event.target.id.includes("Id")) {
@@ -58,6 +58,20 @@ export const StratForm = () => {
             
             const foundMap = maps.find(m => newStrategy.mapId === m.id)
             setFoundMap(foundMap)
+        }
+
+        const handleSelectedSite = (event) => {
+            event.preventDefault()
+            let selectedSite = event.target.value
+            
+            if (event.target.id.includes("siteId")) {
+                selectedSite = parseInt(selectedSite)
+            }
+            newStrategy[event.target.id] = selectedSite
+            setStrategies(newStrategy)
+            
+            const foundSite = sites.find(s => newStrategy.siteId === s.id)
+            setFoundSite(foundSite)
         }
 
     return (
@@ -87,10 +101,29 @@ export const StratForm = () => {
                     <label htmlFor="siteSelection">Choose a Site:</label>
                     {sites.map(s => {
                         if (s.mapId === foundMap.id) {
-                            return <button type="radio" value={s.id} name={s.name}>{s.name} </button> 
+                            return <button type="radio" value={s.id} name="siteId" id="siteId" onClick={handleSelectedSite}>{s.name} </button> 
                         }
                     })}
                     
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="selectedSiteImg">
+                    {foundSite ? <img className="selectedSite" src={foundSite.blueprint}  alt=""/> : "" } 
+                </div>
+            </fieldset>
+                    
+
+            <fieldset> 
+                <div className="form-group">
+                    <label htmlFor="operatorSide">Atk Strategy or Def</label>
+                    <button type="radio" value="" name="side">ATK</button>
+                    <button type="radio" value="" name="side">DEF</button>
+                        <div className="operators">
+                        {operators.map(o => {
+                            return <button type="radio" value={o.id} name={o.name}>{o.name}</button> 
+                        })}
+                        </div>
                 </div>
             </fieldset>
         </form>
