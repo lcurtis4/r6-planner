@@ -135,9 +135,16 @@ export const StratForm = () => {
                     <button type="radio" value="1" name="sideId" id="sideId" onClick={handleSelectedSide}>ATK</button>
                     <button type="radio" value="2" name="sideId" id="sideId" onClick={handleSelectedSide}>DEF</button>
                         <div className="operators">
-                        {operators.map(o => {
-                            if (o.side === newStrategy.sideId)
-                            return <button><img src={o.img} alt={o.name} className="opIcon" /></button> //<button type="radio" value={o.id} name={o.name}>{o.name}</button> 
+                            {operators.map(o => {
+                                if (o.side === newStrategy.sideId)
+                            return //<button><img src={o.img} alt={o.name} className="opIcon" /></button>
+                            <div className="form-check">
+                                <input type="checkbox" id="opCheckbox" />
+                                <label for="opCheckbox">
+                                    <img src={o.img} alt={o.name} className="opIcon" />
+                                </label>
+                            </div>
+                            // return  //<button type="radio" value={o.id} name={o.name}>{o.name}</button> 
                         })}
                         </div>
                 </div>
