@@ -72,3 +72,17 @@
     top: 05%;
     left: 50%;
 }
+
+.saveButton {
+    position: fixed;
+     bottom: 3em;
+     right: 5em;
+     height: 55px;
+     width: 165px;
+}
+
+.confirm{
+    position: fixed;
+    bottom: 22em;
+    left: 5em;
+}
