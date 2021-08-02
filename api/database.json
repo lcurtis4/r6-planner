@@ -234,7 +234,7 @@
         {
             "id": 26, 
             "name": "FirstFloor",
-            "blueprint": "images/Border/BorderFirstFloor.jph",
+            "blueprint": "images/Border/BorderGroundFloor.jpg",
             "mapId": 10
         },
         {

@@ -13,7 +13,7 @@ export const StratForm = () => {
     const { sites, getSites} = useContext(SiteContext)
     const { operators, getOperators, selectedOperators, getSelectedOperators } = useContext(OperatorContext)
 
-    console.log(selectedOperators)
+    //console.log(selectedOperators)
     const [strategy, setStrategies] = useState({
         mapId: "",  
         siteId: "",
@@ -21,14 +21,17 @@ export const StratForm = () => {
     });
 
     // const [selectedOp, setSelectedOp] = useState([])
-    // const [selectedOps, setSelectedOps] = useState([])
-
+    
     const newStrategy = { ...strategy }
-    //console.log(newStrategy)
+    ////console.log(newStrategy)
+    
+    const [selectedOps, setSelectedOps] = useState([])
+
+    const newSelectedOps = {...selectedOps}
 
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
-    console.log(foundMap)
+    //console.log(foundMap)
 
     useEffect(() => {
         getStrategies()
@@ -43,8 +46,22 @@ export const StratForm = () => {
     // const [isLoading, setIsLoading] = useState(true) 
     // const { strategyId } = useParams()
     // const history = useHistory()
+    const handleSelectedOp = event => {
+        event.preventDefault() 
+        let selectedOp = event.target.value 
 
-        const handleSelectedMap = (event) => {
+        if (event.target.id.includes("selectedOp")) {
+            selectedOp = parseInt(selectedOp)
+        }
+        newSelectedOps[event.target.id] = selectedOp
+
+        const foundOp = operators.find(o => newSelectedOps.id === o.id)
+        setSelectedOps(foundOp)
+        console.log("newSelectedOps",newSelectedOps)
+        console.log("selectedOp",selectedOp)
+    }
+        
+    const handleSelectedMap = (event) => {
             event.preventDefault()
             let selectedMap = event.target.value
             
@@ -56,6 +73,7 @@ export const StratForm = () => {
             
             const foundMap = maps.find(m => newStrategy.mapId === m.id)
             setFoundMap(foundMap)
+            console.log(selectedMap)
         }
         
         const handleSelectedSite = (event) => {
@@ -81,6 +99,7 @@ export const StratForm = () => {
             }
             newStrategy[event.target.id] = selectedSide
             setStrategies(newStrategy)
+            console.log(selectedSide)
         }
 
     return (
@@ -123,17 +142,18 @@ export const StratForm = () => {
             <> 
                 <div className="operatorSelection" >
                     <label className="operatorSelectionText" htmlFor="operatorSide">3. Atk Operators or Def</label>
-                    <button type="radio" value="1" name="sideId" id="sideId" onClick={handleSelectedSide}>ATK</button>
-                    <button type="radio" value="2" name="sideId" id="sideId" onClick={handleSelectedSide}>DEF</button>
+                    <button type="radio" value="1" name="sideId" id="sideId" key="1" onClick={handleSelectedSide}>ATK</button>
+                    <button type="radio" value="2" name="sideId" id="sideId" key="2" onClick={handleSelectedSide}>DEF</button>
                         <div className="operators">
                             {operators.map(o => {
-                                if (o.side === newStrategy.sideId)
-                                return <button key={o.id}><img src={o.img} alt={o.name} className="opIcon" key={o.name} /></button>
-                            })}
+                                if (o.side === newStrategy.sideId) {
+                             //console.log(o)
+                                return <button><img src={o.img}  alt={o.name} id="selectedOp" className="opIcon" key={o.id} value={o.id} onClick={handleSelectedOp}/></button>
+                            }})}
                         </div>
                         <div className="confirm">
                         <label className="operatorSelectionConfirmText" htmlFor="confirmOp">4. Confirm Selected Operators</label>
-                    <button type="radio" value="1" name="confirmOps" id="selecedOps">Confirm</button>  
+                    <button type="radio" value="1" name="confirmOps" id="confirm">Confirm</button>  
                         </div>
                     
                 </div>
