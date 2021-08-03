@@ -1,4 +1,3 @@
-//import { R6Planner } from "./r6Planner"
 import { MapProvider  } from "./providers/mapProvider"
 import { OperatorProvider } from "./providers/operatorProvider"
 import { SiteProvider } from "./providers/siteProvider"

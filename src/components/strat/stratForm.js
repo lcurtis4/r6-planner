@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
-// import { useHistory } from "react-router"
+
 import { StrategyContext } from "../providers/stratProvider"
 import { MapContext } from "../providers/mapProvider"
-// import { useParams } from "react-router-dom"
 import { OperatorContext } from "../providers/operatorProvider"
 import { SiteContext } from "../providers/siteProvider"
 import "./form.css"
@@ -13,52 +12,42 @@ export const StratForm = () => {
     const { sites, getSites} = useContext(SiteContext)
     const { operators, getOperators, selectedOperators, getSelectedOperators } = useContext(OperatorContext)
 
-    //console.log(selectedOperators)
     const [strategy, setStrategies] = useState({
         mapId: "",  
         siteId: "",
         sideId: "",
     });
 
-    // const [selectedOp, setSelectedOp] = useState([])
-    
     const newStrategy = { ...strategy }
-    ////console.log(newStrategy)
     
     const [selectedOps, setSelectedOps] = useState([])
 
-    const newSelectedOps = {...selectedOps}
-
+    
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
-    //console.log(foundMap)
-
+    
     useEffect(() => {
         getStrategies()
         .then(getMaps())
         .then(getSites())
         .then(getOperators())
         .then(getSelectedOperators())
-
+        
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    // const [isLoading, setIsLoading] = useState(true) 
-    // const { strategyId } = useParams()
-    // const history = useHistory()
+    
     const handleSelectedOp = event => {
-        event.preventDefault() 
-        let selectedOp = event.target.value 
-
-        if (event.target.id.includes("selectedOp")) {
-            selectedOp = parseInt(selectedOp)
-        }
-        newSelectedOps[event.target.id] = selectedOp
-
-        const foundOp = operators.find(o => newSelectedOps.id === o.id)
-        setSelectedOps(foundOp)
-        console.log("newSelectedOps",newSelectedOps)
+        //event.preventDefault() 
+        let selectedOp = parseInt(event.target.id)
         console.log("selectedOp",selectedOp)
+        
+        const foundOp = operators.find(o => selectedOp === o.id)
+
+        const newSelectedOps = [...selectedOps]
+        newSelectedOps.push(foundOp)
+
+        setSelectedOps(newSelectedOps)
+        console.log("newSelectedOps",newSelectedOps)
     }
         
     const handleSelectedMap = (event) => {
@@ -99,11 +88,10 @@ export const StratForm = () => {
             }
             newStrategy[event.target.id] = selectedSide
             setStrategies(newStrategy)
-            console.log(selectedSide)
         }
 
     return (
-        <form className="strategy_Form">
+        <>
             <h2 className="strategyFormTitle">New Strategy</h2>
             <>
                 <div className="mapSelection">
@@ -144,28 +132,31 @@ export const StratForm = () => {
                     <label className="operatorSelectionText" htmlFor="operatorSide">3. Atk Operators or Def</label>
                     <button type="radio" value="1" name="sideId" id="sideId" key="1" onClick={handleSelectedSide}>ATK</button>
                     <button type="radio" value="2" name="sideId" id="sideId" key="2" onClick={handleSelectedSide}>DEF</button>
-                        <div className="operators">
-                            {operators.map(o => {
-                                if (o.side === newStrategy.sideId) {
-                             //console.log(o)
-                                return <button><img src={o.img}  alt={o.name} id="selectedOp" className="opIcon" key={o.id} value={o.id} onClick={handleSelectedOp}/></button>
-                            }})}
-                        </div>
-                        <div className="confirm">
+                    <div className="operators">
+                        {operators.map(o => {
+                            if (o.side === newStrategy.sideId) {
+                            return <img src={o.img}  alt={o.name} id={o.id} className="opIcon" key={o.id} onClick={handleSelectedOp}/>
+                        }})}
+                    </div>
+                    <div className="confirm">
                         <label className="operatorSelectionConfirmText" htmlFor="confirmOp">4. Confirm Selected Operators</label>
-                    <button type="radio" value="1" name="confirmOps" id="confirm">Confirm</button>  
-                        </div>
+                        <button type="radio" value="1" name="confirmOps" id="confirm">Confirm</button>  
+                    </div>
                     
                 </div>
             </>
             <>
                 <div className="roleDescription" >
                     <label className="operatorRoleDescriptionText" htmlFor="roleDescription">5. Describe Each Selected Operators Role:</label>
-                        <input type="text" className="operatorRole" id="1" placeholder="Insert Operator Role Description here" />
-                        <input type="text" className="operatorRole" id="2" placeholder="Insert Operator Role Description here" />
-                        <input type="text" className="operatorRole" id="3" placeholder="Insert Operator Role Description here" />
-                        <input type="text" className="operatorRole" id="4" placeholder="Insert Operator Role Description here" />
-                        <input type="text" className="operatorRole" id="5" placeholder="Insert Operator Role Description here" />
+                    {selectedOps.map(o => {
+                        return (
+                        <div key={o.id} >
+                            <img src={o.img} alt="" className="opIcon" />
+                            <input type="text" className="operatorRole" placeholder="Insert Operator Role Description here" />
+                        </div>
+                        )
+                    })}
+                        
                 </div>
             </>
             <>
@@ -174,14 +165,6 @@ export const StratForm = () => {
                 </div>
             </>
         </>
-    </form>
+    </>
     )
 }
-
-
-// <li className="form-check">
-//     <input type="checkbox" id="opCheckbox" />
-//     <label for="opCheckbox">
-//         {/* <img src={o.img} alt={o.name} className="opIcon" /> */}
-//     </label>
-// </li>
