@@ -1,58 +1,55 @@
 import React, { useContext, useEffect, useState } from "react"
-import { useHistory } from "react-router"
+
 import { StrategyContext } from "../providers/stratProvider"
 import { MapContext } from "../providers/mapProvider"
-import { useParams } from "react-router-dom"
 import { OperatorContext } from "../providers/operatorProvider"
 import { SiteContext } from "../providers/siteProvider"
 import "./form.css"
 
 export const StratForm = () => {
-    const { addStrategies, updateStrategies, getStrategies, getStrategiesById } = useContext(StrategyContext)
-    const { maps, getMaps, getMapsById } = useContext(MapContext)
-    const { sites, getSites, getSitesById } = useContext(SiteContext)
-    const { operators, getOperators, getOperatorsById } = useContext(OperatorContext)
+    const { getStrategies} = useContext(StrategyContext)
+    const { maps, getMaps } = useContext(MapContext)
+    const { sites, getSites} = useContext(SiteContext)
+    const { operators, getOperators, selectedOperators, getSelectedOperators } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "",  
         siteId: "",
-        userId: "",
         sideId: "",
     });
 
-    const [selectedOp, setSelectedOp] = useState([])
+    const newStrategy = { ...strategy }
+    
     const [selectedOps, setSelectedOps] = useState([])
 
-    const newStrategy = { ...strategy }
-    console.log(newStrategy)
-
+    
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
-
+    
     useEffect(() => {
         getStrategies()
         .then(getMaps())
         .then(getSites())
         .then(getOperators())
+        .then(getSelectedOperators())
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    const [isLoading, setIsLoading] = useState(true) 
-    const { strategyId } = useParams()
-    const history = useHistory()
-
-        // const handleControlledInputChange = (event) => {
-        //     const newStrategy = { ...strategy }
-        //     let selectedVal = event.target.value
-
-        //     if (event.target.id.includes("Id")) {
-        //         selectedVal = parseInt(selectedVal)
-        //     }
-        //     newStrategy[event.target.id] = selectedVal
-        //     setStrategies(newStrategy)
-        // }
+    
+    const handleSelectedOp = event => {
+        let selectedOp = parseInt(event.target.id)
+        console.log("selectedOp",selectedOp)
         
+        const foundOp = operators.find(o => selectedOp === o.id)
+
+        const newSelectedOps = [...selectedOps]
+        newSelectedOps.push(foundOp)
+
+        setSelectedOps(newSelectedOps)
+        console.log("newSelectedOps",newSelectedOps)
+    }
         
-        const handleSelectedMap = (event) => {
+    const handleSelectedMap = (event) => {
             event.preventDefault()
             let selectedMap = event.target.value
             
@@ -64,6 +61,7 @@ export const StratForm = () => {
             
             const foundMap = maps.find(m => newStrategy.mapId === m.id)
             setFoundMap(foundMap)
+            console.log(selectedMap)
         }
         
         const handleSelectedSite = (event) => {
@@ -92,12 +90,11 @@ export const StratForm = () => {
         }
 
     return (
-        <form className="strategy_Form">
+        <>
             <h2 className="strategyFormTitle">New Strategy</h2>
-            <fieldset> 
-                <div className="form-group">
-                    <label htmlFor="selectedMap">Choose a Map to Begin</label>
-                    <select name="mapId" id="mapId" className="form-control" value={strategy.mapId} onChange={handleSelectedMap}>
+                <div className="mapSelection">
+                    <label htmlFor="selectedMap" className="siteText">1. Choose a Map to Begin</label>
+                    <select name="mapId" id="mapId" className="siteButton" value={strategy.mapId} onChange={handleSelectedMap}>
                         <option value="0">Select A Map</option>
                         {maps.map(m => (
                             <option key={m.id} value={m.id}>
@@ -107,42 +104,46 @@ export const StratForm = () => {
                         }
                     </select>
                 </div>
-            </fieldset>
-            <fieldset>
                 <div className="selectedMapImg">
                     {foundMap ? <img className="selectedMap" src={foundMap.img}  alt=""/> : "" } 
                 </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="siteSelection">Choose a Site:</label>
+                <div className="siteSelection">
+                    <label htmlFor="siteSelection">2. Choose a Site:</label>
                     {sites.map(s => {
                         if (s.mapId === foundMap.id) {
-                            return <button type="radio" value={s.id} name="siteId" id="siteId" onClick={handleSelectedSite}>{s.name} </button> 
+                            return <button type="radio" value={s.id} name="siteId" id="siteId" key={s.id} onClick={handleSelectedSite}>{s.name} </button> 
                         }
                     })}
-                    
                 </div>
-            </fieldset>
-            <fieldset>
                 <div className="selectedSiteImg">
                     {foundSite ? <img className="selectedSite" src={foundSite.blueprint}  alt=""/> : "" } 
                 </div>
-            </fieldset>
-            <fieldset> 
-                <div className="form-group">
-                    <label htmlFor="operatorSide">Atk Strategy or Def</label>
-                    <button type="radio" value="1" name="sideId" id="sideId" onClick={handleSelectedSide}>ATK</button>
-                    <button type="radio" value="2" name="sideId" id="sideId" onClick={handleSelectedSide}>DEF</button>
-                        <div className="operators">
+                <div className="operatorSelection" >
+                    <label className="operatorSelectionText" htmlFor="operatorSide">3. Atk Operators or Def</label>
+                    <button type="radio" value="1" name="sideId" id="sideId" key="1" onClick={handleSelectedSide}>ATK</button>
+                    <button type="radio" value="2" name="sideId" id="sideId" key="2" onClick={handleSelectedSide}>DEF</button>
+                    <div className="operators">
                         {operators.map(o => {
-                            if (o.side === newStrategy.sideId)
-                            return <button><img src={o.img} alt={o.name} className="opIcon" /></button> //<button type="radio" value={o.id} name={o.name}>{o.name}</button> 
-                        })}
-                        </div>
+                            if (o.side === newStrategy.sideId) {
+                            return <img src={o.img}  alt={o.name} id={o.id} className="opIcon" key={o.id} onClick={handleSelectedOp}/>
+                        }})}
+                    </div>
                 </div>
-            </fieldset>
-        </form>
+                <div className="roleDescription" >
+                    <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
+                    {selectedOps.map(o => {
+                        return (
+                        <div key={o.id} className="operatorRole">
+                            <img src={o.img} alt="" className="opIcon" />
+                            <input type="text"  className="roleText" placeholder="Insert Operator Role Description here" />
+                        </div>
+                        )
+                    })}
+                        
+                </div>
+                <div className="saveButton">
+                    <button type="radio" className="saveButton" id="save">Save Strategy</button>
+                </div>
+        </>
     )
 }
-
