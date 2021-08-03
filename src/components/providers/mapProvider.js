@@ -11,7 +11,7 @@ export const MapProvider = (props) => {
         .then(setMaps)
     }
     const getMapsById = (id) => {
-            return fetch(`http://localhost:8088/maps/${id}`)
+            return fetch("http://localhost:8088/maps/${id}")
             .then(res => res.json())
     }
 

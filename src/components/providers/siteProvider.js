@@ -12,7 +12,7 @@ export const SiteProvider = (props) => {
     }
 
     const getSitesById = (id) => {
-            return fetch(`http://localhost:8088/sites/${id}`)
+            return fetch("http://localhost:8088/sites/${id}")
             .then(res => res.json())
     }
 

@@ -1,87 +1,14 @@
-.strategy_Form {
-    padding-left: 5em;
-    padding-top: 3em;
-    padding-right: 5em;
-    padding-bottom: 3em;
-}
-
 .selectedSite {
     height: 400px;
     width: 650px;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-}
-
-.siteSelection{
-    height: 400px;
-    width: 650px;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-}
-
-.operatorSelection {
-    height: 100%;
-    width: 650px;
-    position: fixed;
-    top:45;
-    padding-top: 40px;
-}
-
-.operatorSelectionText {
-    padding-bottom: 1em;
 }
 
 .selectedMap {
     height: 200px;
-    width: 350px;
-
+    width: 350px
 }
 
 .opIcon {
     height: 50px;
     width: 50px;
 }
-
-.mapSelection {
-    position: fixed;
-    top: 05%;
-    left: 50%;
-    
-}
-
-.roleDescription {
-    position: fixed;
-    bottom: 10em;
-    padding-left: 59.75em;
-}
-
-.operatorRole {
-    padding-left: 25%;
-    width: 250px;
-    display: flex;
-    
-    
-}
-
-.h2 {
-    position: fixed;
-    top: 05%;
-    left: 50%;
-}
-
-.saveButton {
-    position: fixed;
-     bottom: 3em;
-     right: 5em;
-     height: 55px;
-     width: 165px;
-}
-
-.confirm{
-    position: fixed;
-    bottom: 22em;
-    left: 5em;
-}
-
