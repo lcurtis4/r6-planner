@@ -13,6 +13,13 @@
     left: 50%;
 }
 
+.strategyFormTitle {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-left: 50px;
+}
+
 .siteSelection{
     height: 400px;
     width: 650px;
@@ -23,10 +30,11 @@
 
 .operatorSelection {
     height: 100%;
-    width: 650px;
+    width: 450px;
     position: fixed;
     top:45;
     padding-top: 40px;
+    padding-left: 10%;
 }
 
 .operatorSelectionText {
@@ -36,6 +44,7 @@
 .selectedMap {
     height: 200px;
     width: 350px;
+    padding-left: 10%;
 
 }
 
@@ -53,16 +62,19 @@
 
 .roleDescription {
     position: fixed;
-    bottom: 10em;
-    padding-left: 59.75em;
+    top: 45em;
+    padding-left: 10%
 }
 
 .operatorRole {
-    padding-left: 25%;
-    width: 250px;
+    padding-left: 5%;
+    width: 450px;
     display: flex;
     
-    
+}
+
+.roleText {
+    width: 350px
 }
 
 .h2 {
@@ -77,11 +89,5 @@
      right: 5em;
      height: 55px;
      width: 165px;
-}
-
-.confirm{
-    position: fixed;
-    bottom: 22em;
-    left: 5em;
 }
 

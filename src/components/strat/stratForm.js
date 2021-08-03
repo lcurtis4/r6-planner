@@ -37,7 +37,6 @@ export const StratForm = () => {
     }, [])
     
     const handleSelectedOp = event => {
-        //event.preventDefault() 
         let selectedOp = parseInt(event.target.id)
         console.log("selectedOp",selectedOp)
         
@@ -93,7 +92,6 @@ export const StratForm = () => {
     return (
         <>
             <h2 className="strategyFormTitle">New Strategy</h2>
-            <>
                 <div className="mapSelection">
                     <label htmlFor="selectedMap" className="siteText">1. Choose a Map to Begin</label>
                     <select name="mapId" id="mapId" className="siteButton" value={strategy.mapId} onChange={handleSelectedMap}>
@@ -106,12 +104,9 @@ export const StratForm = () => {
                         }
                     </select>
                 </div>
-            <>
                 <div className="selectedMapImg">
                     {foundMap ? <img className="selectedMap" src={foundMap.img}  alt=""/> : "" } 
                 </div>
-            </>
-            <>
                 <div className="siteSelection">
                     <label htmlFor="siteSelection">2. Choose a Site:</label>
                     {sites.map(s => {
@@ -119,15 +114,10 @@ export const StratForm = () => {
                             return <button type="radio" value={s.id} name="siteId" id="siteId" key={s.id} onClick={handleSelectedSite}>{s.name} </button> 
                         }
                     })}
-                    
                 </div>
-            </>
-            <>
                 <div className="selectedSiteImg">
                     {foundSite ? <img className="selectedSite" src={foundSite.blueprint}  alt=""/> : "" } 
                 </div>
-            </>
-            <> 
                 <div className="operatorSelection" >
                     <label className="operatorSelectionText" htmlFor="operatorSide">3. Atk Operators or Def</label>
                     <button type="radio" value="1" name="sideId" id="sideId" key="1" onClick={handleSelectedSide}>ATK</button>
@@ -138,33 +128,22 @@ export const StratForm = () => {
                             return <img src={o.img}  alt={o.name} id={o.id} className="opIcon" key={o.id} onClick={handleSelectedOp}/>
                         }})}
                     </div>
-                    <div className="confirm">
-                        <label className="operatorSelectionConfirmText" htmlFor="confirmOp">4. Confirm Selected Operators</label>
-                        <button type="radio" value="1" name="confirmOps" id="confirm">Confirm</button>  
-                    </div>
-                    
                 </div>
-            </>
-            <>
                 <div className="roleDescription" >
-                    <label className="operatorRoleDescriptionText" htmlFor="roleDescription">5. Describe Each Selected Operators Role:</label>
+                    <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
                     {selectedOps.map(o => {
                         return (
-                        <div key={o.id} >
+                        <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
-                            <input type="text" className="operatorRole" placeholder="Insert Operator Role Description here" />
+                            <input type="text"  className="roleText" placeholder="Insert Operator Role Description here" />
                         </div>
                         )
                     })}
                         
                 </div>
-            </>
-            <>
                 <div className="saveButton">
                     <button type="radio" className="saveButton" id="save">Save Strategy</button>
                 </div>
-            </>
         </>
-    </>
     )
 }
