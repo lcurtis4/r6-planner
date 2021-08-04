@@ -175,7 +175,7 @@ export const StratForm = () => {
                         
                 </div>
                 <div className="saveButton">
-                    <button type="radio" className="saveButton" id="save" onClick={handleSaveStrat}>Save Strategy</button>
+                    <button type="radio" className="saveButton" id="save" onClick={() => {history.push("/strategies/list")}, handleSaveStrat}>Save Strategy</button>
                 </div>
         </>
     )
