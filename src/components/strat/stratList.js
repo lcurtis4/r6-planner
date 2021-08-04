@@ -16,14 +16,14 @@ export const StratList = () => {
 
     return (
         <>
-                <h2>Strategies</h2>
-                    <button className="newStratButton" onClick={() => {history.push("/strategies")}}>Create New Strategy</button>
-            
+            <h2>Strategies</h2>
+            <button className="newStratButton" onClick={() => {history.push("/form")}}>Create New Strategy</button>
             <div className="strategiesList">
                 {
                     strategies.map(s => {
-                        if (s.userId === sessionStorage.getItem("r6planner_user")) {
-                            return <StratCard key={s.id}/>
+                        console.log(strategies)
+                        if (s.userId == sessionStorage.getItem("r6planner_user")) {
+                            return <StratCard key={s.id} strategy={s}/>
                         }
                     })
                 }

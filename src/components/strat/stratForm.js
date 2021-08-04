@@ -22,6 +22,11 @@ export const StratForm = () => {
     const newStrategy = { ...strategy }
     
     const [selectedOps, setSelectedOps] = useState([])
+    console.log(selectedOps)
+    selectedOps.forEach(function (selection) {
+        selection.role = "";
+    })
+
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
 
@@ -90,10 +95,10 @@ export const StratForm = () => {
     }
 
     const handleControlledInputChange = (event) => {
-        let selectedVal = event.target.value 
+        let opRoleText = event.target.value 
         
         //console.log(selectedVal)
-            newSelectedOps[event.target.id] = selectedVal
+            newSelectedOps[event.target.id] = opRoleText
             setSelectedOps(newSelectedOps)
     }
 
@@ -168,14 +173,14 @@ export const StratForm = () => {
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
-                            <input type="text" id={selectedOps.role}  className="roleText" placeholder="Insert Operator Role Description here" />
+                            <input type="text" id={selectedOps.role}  className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
                         </div>
                         )
                     })}
                         
                 </div>
                 <div className="saveButton">
-                    <button type="radio" className="saveButton" id="save" onClick={() => {history.push("/strategies/list")}, handleSaveStrat}>Save Strategy</button>
+                    <button type="radio" className="saveButton" id="save" onClick={() => {history.push("/")}, handleSaveStrat}>Save Strategy</button>
                 </div>
         </>
     )
