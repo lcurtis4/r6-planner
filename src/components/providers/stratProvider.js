@@ -6,7 +6,7 @@ export const StrategyProvider = (props) => {
     const [strategies, setStrategies] = useState([])
 
     const getStrategies = () => {
-        return fetch("http://localhost:8088/strategies")
+        return fetch("http://localhost:8088/strategies?_expand=map&_expand=site")
         .then(res => res.json())
         .then(setStrategies)
     }

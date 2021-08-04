@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
-
+import { useHistory } from "react-router"
+import { useParams } from "react-router-dom"
 import { StrategyContext } from "../providers/stratProvider"
 import { MapContext } from "../providers/mapProvider"
 import { OperatorContext } from "../providers/operatorProvider"
@@ -7,24 +8,30 @@ import { SiteContext } from "../providers/siteProvider"
 import "./form.css"
 
 export const StratForm = () => {
-    const { getStrategies} = useContext(StrategyContext)
+    const { getStrategies, addStrategy, updateStrategy} = useContext(StrategyContext)
     const { maps, getMaps } = useContext(MapContext)
     const { sites, getSites} = useContext(SiteContext)
-    const { operators, getOperators, selectedOperators, getSelectedOperators } = useContext(OperatorContext)
+    const { operators, getOperators, getSelectedOperators } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "",  
         siteId: "",
         sideId: "",
+        userId: sessionStorage.getItem("r6planner_user")
     });
-
     const newStrategy = { ...strategy }
     
     const [selectedOps, setSelectedOps] = useState([])
+    console.log(selectedOps)
+    selectedOps.forEach(function (selection) {
+        selection.role = "";
+    })
 
-    
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
+
+    const { strategyId } = useParams()
+    const history = useHistory(); 
     
     useEffect(() => {
         getStrategies()
@@ -36,58 +43,88 @@ export const StratForm = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
+    const handleSelectedMap = (event) => {
+        event.preventDefault()
+        let selectedMap = event.target.value
+        
+        if (event.target.id.includes("mapId")) {
+            selectedMap = parseInt(selectedMap)
+        }
+        newStrategy[event.target.id] = selectedMap
+        setStrategies(newStrategy)
+        
+        const foundMap = maps.find(m => newStrategy.mapId === m.id)
+        setFoundMap(foundMap)
+    }
+    
+    const handleSelectedSite = (event) => {
+        event.preventDefault()
+        let selectedSite = event.target.value
+        
+        if (event.target.id.includes("siteId")) {
+            selectedSite = parseInt(selectedSite)
+        }
+        newStrategy[event.target.id] = selectedSite
+        setStrategies(newStrategy)
+        
+        const foundSite = sites.find(s => newStrategy.siteId === s.id)
+        setFoundSite(foundSite)
+    }
+    
+    const handleSelectedSide = (event) => {
+        event.preventDefault()
+        let selectedSide = event.target.value
+        
+        if (event.target.id.includes("sideId")) {
+            selectedSide = parseInt(selectedSide)
+        }
+        newStrategy[event.target.id] = selectedSide
+        setStrategies(newStrategy)
+    }
+
+    const newSelectedOps = [...selectedOps]
+
     const handleSelectedOp = event => {
         let selectedOp = parseInt(event.target.id)
-        console.log("selectedOp",selectedOp)
         
         const foundOp = operators.find(o => selectedOp === o.id)
 
-        const newSelectedOps = [...selectedOps]
         newSelectedOps.push(foundOp)
 
         setSelectedOps(newSelectedOps)
-        console.log("newSelectedOps",newSelectedOps)
     }
+
+    const handleControlledInputChange = (event) => {
+        let opRoleText = event.target.value 
         
-    const handleSelectedMap = (event) => {
-            event.preventDefault()
-            let selectedMap = event.target.value
-            
-            if (event.target.id.includes("mapId")) {
-                selectedMap = parseInt(selectedMap)
-            }
-            newStrategy[event.target.id] = selectedMap
-            setStrategies(newStrategy)
-            
-            const foundMap = maps.find(m => newStrategy.mapId === m.id)
-            setFoundMap(foundMap)
-            console.log(selectedMap)
+        //console.log(selectedVal)
+            newSelectedOps[event.target.id] = opRoleText
+            setSelectedOps(newSelectedOps)
+    }
+
+    const handleSaveStrat = (event) => {
+        event.preventDefault() 
+        if (strategy.mapId === "" || strategy.sideId === "" || strategy.siteId === "" ) {
+            window.alert("Please fill in all fields!")
+        } if (strategyId){
+            updateStrategy({
+                id: strategyId,
+                mapId: strategy.mapId,
+                siteId: strategy.siteId,
+                sideId: strategy.sideId,
+                userId: parseInt(strategy.userId)
+            })
+            .then(() => history.push("/strategies"))
+        } else {
+            addStrategy({
+                id: strategyId, 
+                mapId: strategy.mapId,
+                siteId: strategy.siteId,
+                sideId: strategy.sideId,
+                userId: parseInt(strategy.userId)
+            }).then(() => history.push("/"))
         }
-        
-        const handleSelectedSite = (event) => {
-            event.preventDefault()
-            let selectedSite = event.target.value
-            
-            if (event.target.id.includes("siteId")) {
-                selectedSite = parseInt(selectedSite)
-            }
-            newStrategy[event.target.id] = selectedSite
-            setStrategies(newStrategy)
-            
-            const foundSite = sites.find(s => newStrategy.siteId === s.id)
-            setFoundSite(foundSite)
-        }
-        
-        const handleSelectedSide = (event) => {
-            event.preventDefault()
-            let selectedSide = event.target.value
-            
-            if (event.target.id.includes("sideId")) {
-                selectedSide = parseInt(selectedSide)
-            }
-            newStrategy[event.target.id] = selectedSide
-            setStrategies(newStrategy)
-        }
+    }
 
     return (
         <>
@@ -132,17 +169,18 @@ export const StratForm = () => {
                 <div className="roleDescription" >
                     <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
                     {selectedOps.map(o => {
+                        console.log(o)
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
-                            <input type="text"  className="roleText" placeholder="Insert Operator Role Description here" />
+                            <input type="text" id={selectedOps.role}  className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
                         </div>
                         )
                     })}
                         
                 </div>
                 <div className="saveButton">
-                    <button type="radio" className="saveButton" id="save">Save Strategy</button>
+                    <button type="radio" className="saveButton" id="save" onClick={() => {history.push("/")}, handleSaveStrat}>Save Strategy</button>
                 </div>
         </>
     )

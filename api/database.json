@@ -1,721 +1,668 @@
 {
-    "users": [
-        {
-            "id": 1, 
-            "name": "Logan Curtis", 
-            "email": "logan@curtis.com"
-        },
-        {
-            "id": 2, 
-            "name": "Logan Curtis", 
-            "email": "test@curtis.com"
-        }
-    ],
-
-    "strategies": [
-        {
-            "id": 1,
-            "mapId": 1,
-            "img": "",
-            "siteId": 1,
-            "userId": 1
-        }
-    ],
-
-    "maps": [
-        {
-            "id": 1,
-            "name": "Bank", 
-            "img": "images/Bank/bankHome.jpg"
-        },
-        {
-            "id": 2, 
-            "name": "Chalet",
-            "img": "images/Chalet/chaletHome.jpg"
-        },
-        {
-            "id": 3, 
-            "name": "Clubhouse",
-            "img": "images/Clubhouse/clubhouseHome.jpg"
-        }, 
-        {
-            "id": 4,
-            "name": "Coastline",
-            "img": "images/Coastline/coastlineHome.jpg"
-        },
-        {
-            "id": 5,
-            "name": "Consulate",
-            "img": "images/Consulate/consulateHome.jpg"
-        }, 
-        {
-            "id": 6, 
-            "name": "Kafe",
-            "img": "images/Kafe/kafeHome.jpg"
-        },
-        {
-            "id": 7, 
-            "name": "Oregon",
-            "img": "images/Oregon/oregonHome.jpg"
-        },
-        {
-            "id": 8, 
-            "name": "Theme Park",
-            "img": "images/Themepark/themeParkHome.jpg"
-        },
-        {
-            "id": 9, 
-            "name": "Kanal",
-            "img": "images/Kanal/kanalHome.jpg"
-        },
-        {
-            "id": 10,
-            "name": "Border",
-            "img": "images/Border/borderHome.jpg"
-        },
-        {
-            "id": 11,
-            "name": "Villa",
-            "img": "images/Villa/villaHome.jpg"
-        }
-    ],
-
-    "sites": [
-        {
-            "id": 1, 
-            "name": "Basement",
-            "blueprint": "images/Bank/BankBasement.jpg",
-            "mapId": 1 
-        },
-        {
-            "id": 2, 
-            "name": "GroundFloor",
-            "blueprint": "images/Bank/BankGroundFloor.jpg",
-            "mapId": 1 
-        },
-        {
-            "id": 3, 
-            "name": "TopFloor",
-            "blueprint": "images/Bank/BankTopFloor.jpg",
-            "mapId": 1 
-        },
-        {
-            "id": 4, 
-            "name": "Basement",
-            "blueprint": "images/Chalet/ChaletRWBasement.jpg",
-            "mapId": 2 
-        },
-        {
-            "id": 5, 
-            "name": "GroundFloor",
-            "blueprint": "images/Chalet/ChaletRWGroundFloor.jpg",
-            "mapId": 2 
-        },
-        {
-            "id": 6, 
-            "name": "TopFloor",
-            "blueprint": "images/Chalet/ChaletRWTopFloor.jpg",
-            "mapId": 2 
-        },
-        {
-            "id": 7, 
-            "name": "Basement",
-            "blueprint": "images/Clubhouse/ClubHouseBasement.jpg",
-            "mapId": 3 
-        },
-        {
-            "id": 8, 
-            "name": "GroundFloor",
-            "blueprint": "images/Clubhouse/ClubHouseGroundFloor.jpg",
-            "mapId": 3 
-        },
-        {
-            "id": 9, 
-            "name": "TopFloor",
-            "blueprint": "images/Clubhouse/CLubHouseTopFloor.jpg",
-            "mapId": 3 
-        },
-        {
-            "id": 10, 
-            "name": "GroundFloor",
-            "blueprint": "images/Coastline/CoastlineGroundFloor.jpg",
-            "mapId": 4 
-        },
-        {
-            "id": 11, 
-            "name": "TopFloor",
-            "blueprint": "images/Coastline/CoastlineTopFloor.jpg",
-            "mapId": 4 
-        },
-        {
-            "id": 12, 
-            "name": "Basement",
-            "blueprint": "images/Consulate/ConsulateBasement.jpg",
-            "mapId": 5 
-        },
-        {
-            "id": 13, 
-            "name": "GroundFloor",
-            "blueprint": "images/Consulate/ConsulateGroundFloor.jpg",
-            "mapId": 5 
-        },
-        {
-            "id": 14, 
-            "name": "TopFloor",
-            "blueprint": "images/Consulate/ConsulateTopFloor.jpg",
-            "mapId": 5 
-        },
-        {
-            "id": 15, 
-            "name": "GroundFloor",
-            "blueprint": "images/Kafe/KafeGroundFloor.jpg",
-            "mapId": 6 
-        },
-        {
-            "id": 16, 
-            "name": "FirstFloor",
-            "blueprint": "images/Kafe/KafeMiddleFloor.jpg",
-            "mapId": 6 
-        },
-        {
-            "id": 17, 
-            "name": "TopFloor",
-            "blueprint": "images/Kafe/KafeTopFloor.jpg",
-            "mapId": 6 
-        },
-        {
-            "id": 18, 
-            "name": "Basement",
-            "blueprint": "images/Oregon/OregonRWBasement.jpg",
-            "mapId": 7 
-        },
-        {
-            "id": 19, 
-            "name": "GroundFloor",
-            "blueprint": "images/Oregon/OregonRWGroundFloor.jpg",
-            "mapId": 7 
-        },
-        {
-            "id": 20,
-            "name": "TopFloor",
-            "blueprint": "images/Oregon/OregonRWTopFloor.jpg",
-            "mapId": 7
-        },
-        {
-            "id": 21, 
-            "name": "GroundFloor",
-            "blueprint": "images/Themepark/ThemeparkGroundFloor.jpg",
-            "mapId": 8
-        },
-        {
-            "id": 22, 
-            "name": "TopFloor",
-            "blueprint": "images/Themepark/ThemeparkTopFloor.jpg",
-            "mapId": 8
-        },
-        {
-            "id": 23, 
-            "name": "Basement",
-            "blueprint": "images/Kanal/KanalBottomFloor.jpg",
-            "mapId": 9
-        },
-        {
-            "id": 24, 
-            "name": "GroundFloor",
-            "blueprint": "images/Kanal/KanalGroundFloor.jpg",
-            "mapId": 9
-        },
-        {
-            "id": 25, 
-            "name": "TopFloor",
-            "blueprint": "images/Kanal/KanalTopFloor.jpg",
-            "mapId": 9
-        },
-        {
-            "id": 26, 
-            "name": "FirstFloor",
-            "blueprint": "images/Border/BorderGroundFloor.jpg",
-            "mapId": 10
-        },
-        {
-            "id": 27, 
-            "name": "TopFloor",
-            "blueprint": "images/Border/BorderTopFloor.jpg",
-            "mapId": 10
-        },
-        {
-            "id": 28, 
-            "name": "Basement",
-            "blueprint": "images/Villa/VillaBasement.jpg",
-            "mapId": 11
-        },
-        {
-            "id": 29, 
-            "name": "GroundFloor",
-            "blueprint": "images/Villa/VillaGroundFloor.jpg",
-            "mapId": 11
-        },
-        {
-            "id": 30, 
-            "name": "TopFloor",
-            "blueprint": "images/Villa/VillaTopFloor.jpg",
-            "mapId": 11
-        }
-    ],
-    
-    "operators": [
-        {
-            "id": 1, 
-            "name": "Sledge",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/sledge.png" 
-        },
-        {
-            "id": 2,
-            "name": "Thatcher",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/thatcher.png"
-        },
-        {
-            "id": 3,
-            "name": "Ash",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/ash.png"
-        },
-        {
-            "id": 4,
-            "name": "Thermite",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/thermite.png"
-        },
-        {
-            "id": 5,
-            "name": "Twitch",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/twitch.png"
-        },
-        {
-            "id": 6,
-            "name": "Montagne",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/montagne.png"
-        },
-        {
-            "id": 7,
-            "name": "Glaz",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/glaz.png"
-        },
-        {
-            "id": 8,
-            "name": "Fuze",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/fuze.png"
-        },
-        {
-            "id": 9,
-            "name": "Blitz",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/blitz.png"
-        },
-        {
-            "id": 10,
-            "name": "IQ",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/iq.png"
-        },
-        {
-            "id": 11,
-            "name": "Buck",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/buck.png"
-        },
-        {
-            "id": 12,
-            "name": "Blackbeard",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/blackbeard.png"
-        },
-        {
-            "id": 13,
-            "name": "Capitão",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/capitao.png"
-        },
-        {
-            "id": 14,
-            "name": "Hibana",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/hibana.png"
-        },
-        {
-            "id": 15,
-            "name": "Jackal",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/jackal.png"
-        },
-        {
-            "id": 16,
-            "name": "Ying",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/ying.png"
-        },
-        {
-            "id": 17,
-            "name": "Zofia",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/zofia.png"
-        },
-        {
-            "id": 18,
-            "name": "Dokkaebi",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/dokkaebi.png"
-        },
-        {
-            "id": 19,
-            "name": "Lion",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/lion.png"
-        },
-        {
-            "id": 20,
-            "name": "Finka",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/finka.png"
-        },
-        {
-            "id": 21,
-            "name": "Maverick",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/maverick.png"
-        },
-        {
-            "id": 22,
-            "name": "Nomad",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/nomad.png"
-        },
-        {
-            "id": 23,
-            "name": "Gridlock",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/gridlock.png"
-        },
-        {
-            "id": 24,
-            "name": "Nøkk",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/nokk.png"
-        },
-        {
-            "id": 25,
-            "name": "Amaru",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/amaru.png"
-        },
-        {
-            "id": 26,
-            "name": "Kali",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/kali.png"
-        },
-        {
-            "id": 27,
-            "name": "Iana",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/iana.png"
-        },
-        {
-            "id": 28,
-            "name": "Ace",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/ace.png"
-        },
-        {
-            "id": 29,
-            "name": "Zero",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/zero.png"
-        },
-        {
-            "id": 30,
-            "name": "Flores",
-            "side": 1,
-            "selected": false,
-            "img": "images/icons/flores.png"
-        },
-        {
-            "id": 31,
-            "name": "Smoke",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/smoke.png"
-        },
-        {
-            "id": 32,
-            "name": "Mute",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/mute.png"
-        },
-        {
-            "id": 33,
-            "name": "Castle",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/castle.png"
-        },
-        {
-            "id": 34,
-            "name": "Pulse",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/pulse.png"
-        },
-        {
-            "id": 35,
-            "name": "Doc",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/doc.png"
-        },
-        {
-            "id": 36,
-            "name": "Rook",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/rook.png"
-        },
-        {
-            "id": 37,
-            "name": "KapKan",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/kapkan.png"
-        },
-        {
-            "id": 38,
-            "name": "Tachanka",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/tachanka.png"
-        },
-        {
-            "id": 39,
-            "name": "Jäger",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/jager.png"
-        },
-        {
-            "id": 40,
-            "name": "Bandit",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/bandit.png"
-        },
-        {
-            "id": 41,
-            "name": "Frost",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/frost.png"
-        },
-        {
-            "id": 42,
-            "name": "Valkyrie",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/valkyrie.png"
-        },
-        {
-            "id": 43,
-            "name": "Caveira",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/caveira.png"
-        },
-        {
-            "id": 44,
-            "name": "Echo",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/echo.png"
-        },
-        {
-            "id": 45,
-            "name": "Mira",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/mira.png"
-        },
-        {
-            "id": 46,
-            "name": "Lesion",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/lesion.png"
-        },
-        {
-            "id": 47,
-            "name": "Ela",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/ela.png"
-        },
-        {
-            "id": 48,
-            "name": "Vigil",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/vigil.png"
-        },
-        {
-            "id": 49,
-            "name": "Maestro",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/maestro.png"
-        },
-        {
-            "id": 50,
-            "name": "Alibi",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/alibi.png"
-        },
-        {
-            "id": 51,
-            "name": "Clash",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/clash.png"
-        },
-        {
-            "id": 52,
-            "name": "Kaid",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/kaid.png"
-        },
-        {
-            "id": 53,
-            "name": "Mozzie",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/mozzie.png"
-        },
-        {
-            "id": 54,
-            "name": "Warden",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/warden.png"
-        },
-        {
-            "id": 55,
-            "name": "Goyo",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/goyo.png"
-        },
-        {
-            "id": 56,
-            "name": "Wamai",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/wamai.png"
-        },
-        {
-            "id": 57,
-            "name": "Oryx",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/oryx.png"
-        },
-        {
-            "id": 58,
-            "name": "Melusi",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/melusi.png"
-        },
-        {
-            "id": 59,
-            "name": "Aruni",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/aruni.png"
-        },
-        {
-            "id": 60,
-            "name": "ThunderBird",
-            "side": 2,
-            "selected": false,
-            "img": "images/icons/thunderbird.png"
-        }
-    ],
-
-    "selectedOps": [
-        {
-            "id": 1,
-            "role": "",
-            "operatorId": 1, 
-            "strategiesId": 1
-        },
-        {
-            "id": 2,
-            "role": "",
-            "operatorId": 2, 
-            "strategiesId": 1
-        },
-        {
-            "id": 3,
-            "role": "",
-            "operatorId": 3, 
-            "strategiesId": 1
-        },
-        {
-            "id": 4,
-            "role": "",
-            "operatorId": 4, 
-            "strategiesId": 1
-        },
-        {
-            "id": 5,
-            "role": "",
-            "operatorId": 5, 
-            "strategiesId": 1
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Logan Curtis",
+      "email": "logan@curtis.com"
+    },
+    {
+      "id": 2,
+      "name": "Logan Curtis",
+      "email": "test@curtis.com"
+    }
+  ],
+  "strategies": [
+    {
+      "id": 1,
+      "mapId": 1,
+      "siteId": 1,
+      "sideId": 1,
+      "userId": 1
+    },
+    {
+      "mapId": 5,
+      "siteId": 12,
+      "sideId": 2,
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "maps": [
+    {
+      "id": 1,
+      "name": "Bank",
+      "img": "images/Bank/bankHome.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chalet",
+      "img": "images/Chalet/chaletHome.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Clubhouse",
+      "img": "images/Clubhouse/clubhouseHome.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Coastline",
+      "img": "images/Coastline/coastlineHome.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Consulate",
+      "img": "images/Consulate/consulateHome.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Kafe",
+      "img": "images/Kafe/kafeHome.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Oregon",
+      "img": "images/Oregon/oregonHome.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Theme Park",
+      "img": "images/Themepark/themeParkHome.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Kanal",
+      "img": "images/Kanal/kanalHome.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Border",
+      "img": "images/Border/borderHome.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Villa",
+      "img": "images/Villa/villaHome.jpg"
+    }
+  ],
+  "sites": [
+    {
+      "id": 1,
+      "name": "Basement",
+      "blueprint": "images/Bank/BankBasement.jpg",
+      "mapId": 1
+    },
+    {
+      "id": 2,
+      "name": "GroundFloor",
+      "blueprint": "images/Bank/BankGroundFloor.jpg",
+      "mapId": 1
+    },
+    {
+      "id": 3,
+      "name": "TopFloor",
+      "blueprint": "images/Bank/BankTopFloor.jpg",
+      "mapId": 1
+    },
+    {
+      "id": 4,
+      "name": "Basement",
+      "blueprint": "images/Chalet/ChaletRWBasement.jpg",
+      "mapId": 2
+    },
+    {
+      "id": 5,
+      "name": "GroundFloor",
+      "blueprint": "images/Chalet/ChaletRWGroundFloor.jpg",
+      "mapId": 2
+    },
+    {
+      "id": 6,
+      "name": "TopFloor",
+      "blueprint": "images/Chalet/ChaletRWTopFloor.jpg",
+      "mapId": 2
+    },
+    {
+      "id": 7,
+      "name": "Basement",
+      "blueprint": "images/Clubhouse/ClubHouseBasement.jpg",
+      "mapId": 3
+    },
+    {
+      "id": 8,
+      "name": "GroundFloor",
+      "blueprint": "images/Clubhouse/ClubHouseGroundFloor.jpg",
+      "mapId": 3
+    },
+    {
+      "id": 9,
+      "name": "TopFloor",
+      "blueprint": "images/Clubhouse/CLubHouseTopFloor.jpg",
+      "mapId": 3
+    },
+    {
+      "id": 10,
+      "name": "GroundFloor",
+      "blueprint": "images/Coastline/CoastlineGroundFloor.jpg",
+      "mapId": 4
+    },
+    {
+      "id": 11,
+      "name": "TopFloor",
+      "blueprint": "images/Coastline/CoastlineTopFloor.jpg",
+      "mapId": 4
+    },
+    {
+      "id": 12,
+      "name": "Basement",
+      "blueprint": "images/Consulate/ConsulateBasement.jpg",
+      "mapId": 5
+    },
+    {
+      "id": 13,
+      "name": "GroundFloor",
+      "blueprint": "images/Consulate/ConsulateGroundFloor.jpg",
+      "mapId": 5
+    },
+    {
+      "id": 14,
+      "name": "TopFloor",
+      "blueprint": "images/Consulate/ConsulateTopFloor.jpg",
+      "mapId": 5
+    },
+    {
+      "id": 15,
+      "name": "GroundFloor",
+      "blueprint": "images/Kafe/KafeGroundFloor.jpg",
+      "mapId": 6
+    },
+    {
+      "id": 16,
+      "name": "FirstFloor",
+      "blueprint": "images/Kafe/KafeMiddleFloor.jpg",
+      "mapId": 6
+    },
+    {
+      "id": 17,
+      "name": "TopFloor",
+      "blueprint": "images/Kafe/KafeTopFloor.jpg",
+      "mapId": 6
+    },
+    {
+      "id": 18,
+      "name": "Basement",
+      "blueprint": "images/Oregon/OregonRWBasement.jpg",
+      "mapId": 7
+    },
+    {
+      "id": 19,
+      "name": "GroundFloor",
+      "blueprint": "images/Oregon/OregonRWGroundFloor.jpg",
+      "mapId": 7
+    },
+    {
+      "id": 20,
+      "name": "TopFloor",
+      "blueprint": "images/Oregon/OregonRWTopFloor.jpg",
+      "mapId": 7
+    },
+    {
+      "id": 21,
+      "name": "GroundFloor",
+      "blueprint": "images/Themepark/ThemeparkGroundFloor.jpg",
+      "mapId": 8
+    },
+    {
+      "id": 22,
+      "name": "TopFloor",
+      "blueprint": "images/Themepark/ThemeparkTopFloor.jpg",
+      "mapId": 8
+    },
+    {
+      "id": 23,
+      "name": "Basement",
+      "blueprint": "images/Kanal/KanalBottomFloor.jpg",
+      "mapId": 9
+    },
+    {
+      "id": 24,
+      "name": "GroundFloor",
+      "blueprint": "images/Kanal/KanalGroundFloor.jpg",
+      "mapId": 9
+    },
+    {
+      "id": 25,
+      "name": "TopFloor",
+      "blueprint": "images/Kanal/KanalTopFloor.jpg",
+      "mapId": 9
+    },
+    {
+      "id": 26,
+      "name": "FirstFloor",
+      "blueprint": "images/Border/BorderGroundFloor.jpg",
+      "mapId": 10
+    },
+    {
+      "id": 27,
+      "name": "TopFloor",
+      "blueprint": "images/Border/BorderTopFloor.jpg",
+      "mapId": 10
+    },
+    {
+      "id": 28,
+      "name": "Basement",
+      "blueprint": "images/Villa/VillaBasement.jpg",
+      "mapId": 11
+    },
+    {
+      "id": 29,
+      "name": "GroundFloor",
+      "blueprint": "images/Villa/VillaGroundFloor.jpg",
+      "mapId": 11
+    },
+    {
+      "id": 30,
+      "name": "TopFloor",
+      "blueprint": "images/Villa/VillaTopFloor.jpg",
+      "mapId": 11
+    }
+  ],
+  "operators": [
+    {
+      "id": 1,
+      "name": "Sledge",
+      "side": 1,
+      "img": "images/icons/sledge.png"
+    },
+    {
+      "id": 2,
+      "name": "Thatcher",
+      "side": 1,
+      "img": "images/icons/thatcher.png"
+    },
+    {
+      "id": 3,
+      "name": "Ash",
+      "side": 1,
+      "img": "images/icons/ash.png"
+    },
+    {
+      "id": 4,
+      "name": "Thermite",
+      "side": 1,
+      "img": "images/icons/thermite.png"
+    },
+    {
+      "id": 5,
+      "name": "Twitch",
+      "side": 1,
+      "img": "images/icons/twitch.png"
+    },
+    {
+      "id": 6,
+      "name": "Montagne",
+      "side": 1,
+      "img": "images/icons/montagne.png"
+    },
+    {
+      "id": 7,
+      "name": "Glaz",
+      "side": 1,
+      "img": "images/icons/glaz.png"
+    },
+    {
+      "id": 8,
+      "name": "Fuze",
+      "side": 1,
+      "img": "images/icons/fuze.png"
+    },
+    {
+      "id": 9,
+      "name": "Blitz",
+      "side": 1,
+      "img": "images/icons/blitz.png"
+    },
+    {
+      "id": 10,
+      "name": "IQ",
+      "side": 1,
+      "img": "images/icons/iq.png"
+    },
+    {
+      "id": 11,
+      "name": "Buck",
+      "side": 1,
+      "img": "images/icons/buck.png"
+    },
+    {
+      "id": 12,
+      "name": "Blackbeard",
+      "side": 1,
+      "img": "images/icons/blackbeard.png"
+    },
+    {
+      "id": 13,
+      "name": "Capitão",
+      "side": 1,
+      "img": "images/icons/capitao.png"
+    },
+    {
+      "id": 14,
+      "name": "Hibana",
+      "side": 1,
+      "img": "images/icons/hibana.png"
+    },
+    {
+      "id": 15,
+      "name": "Jackal",
+      "side": 1,
+      "img": "images/icons/jackal.png"
+    },
+    {
+      "id": 16,
+      "name": "Ying",
+      "side": 1,
+      "img": "images/icons/ying.png"
+    },
+    {
+      "id": 17,
+      "name": "Zofia",
+      "side": 1,
+      "img": "images/icons/zofia.png"
+    },
+    {
+      "id": 18,
+      "name": "Dokkaebi",
+      "side": 1,
+      "img": "images/icons/dokkaebi.png"
+    },
+    {
+      "id": 19,
+      "name": "Lion",
+      "side": 1,
+      "img": "images/icons/lion.png"
+    },
+    {
+      "id": 20,
+      "name": "Finka",
+      "side": 1,
+      "img": "images/icons/finka.png"
+    },
+    {
+      "id": 21,
+      "name": "Maverick",
+      "side": 1,
+      "img": "images/icons/maverick.png"
+    },
+    {
+      "id": 22,
+      "name": "Nomad",
+      "side": 1,
+      "img": "images/icons/nomad.png"
+    },
+    {
+      "id": 23,
+      "name": "Gridlock",
+      "side": 1,
+      "img": "images/icons/gridlock.png"
+    },
+    {
+      "id": 24,
+      "name": "Nøkk",
+      "side": 1,
+      "img": "images/icons/nokk.png"
+    },
+    {
+      "id": 25,
+      "name": "Amaru",
+      "side": 1,
+      "img": "images/icons/amaru.png"
+    },
+    {
+      "id": 26,
+      "name": "Kali",
+      "side": 1,
+      "img": "images/icons/kali.png"
+    },
+    {
+      "id": 27,
+      "name": "Iana",
+      "side": 1,
+      "img": "images/icons/iana.png"
+    },
+    {
+      "id": 28,
+      "name": "Ace",
+      "side": 1,
+      "img": "images/icons/ace.png"
+    },
+    {
+      "id": 29,
+      "name": "Zero",
+      "side": 1,
+      "img": "images/icons/zero.png"
+    },
+    {
+      "id": 30,
+      "name": "Flores",
+      "side": 1,
+      "img": "images/icons/flores.png"
+    },
+    {
+      "id": 31,
+      "name": "Smoke",
+      "side": 2,
+      "img": "images/icons/smoke.png"
+    },
+    {
+      "id": 32,
+      "name": "Mute",
+      "side": 2,
+      "img": "images/icons/mute.png"
+    },
+    {
+      "id": 33,
+      "name": "Castle",
+      "side": 2,
+      "img": "images/icons/castle.png"
+    },
+    {
+      "id": 34,
+      "name": "Pulse",
+      "side": 2,
+      "img": "images/icons/pulse.png"
+    },
+    {
+      "id": 35,
+      "name": "Doc",
+      "side": 2,
+      "img": "images/icons/doc.png"
+    },
+    {
+      "id": 36,
+      "name": "Rook",
+      "side": 2,
+      "img": "images/icons/rook.png"
+    },
+    {
+      "id": 37,
+      "name": "KapKan",
+      "side": 2,
+      "img": "images/icons/kapkan.png"
+    },
+    {
+      "id": 38,
+      "name": "Tachanka",
+      "side": 2,
+      "img": "images/icons/tachanka.png"
+    },
+    {
+      "id": 39,
+      "name": "Jäger",
+      "side": 2,
+      "img": "images/icons/jager.png"
+    },
+    {
+      "id": 40,
+      "name": "Bandit",
+      "side": 2,
+      "img": "images/icons/bandit.png"
+    },
+    {
+      "id": 41,
+      "name": "Frost",
+      "side": 2,
+      "img": "images/icons/frost.png"
+    },
+    {
+      "id": 42,
+      "name": "Valkyrie",
+      "side": 2,
+      "img": "images/icons/valkyrie.png"
+    },
+    {
+      "id": 43,
+      "name": "Caveira",
+      "side": 2,
+      "img": "images/icons/caveira.png"
+    },
+    {
+      "id": 44,
+      "name": "Echo",
+      "side": 2,
+      "img": "images/icons/echo.png"
+    },
+    {
+      "id": 45,
+      "name": "Mira",
+      "side": 2,
+      "img": "images/icons/mira.png"
+    },
+    {
+      "id": 46,
+      "name": "Lesion",
+      "side": 2,
+      "img": "images/icons/lesion.png"
+    },
+    {
+      "id": 47,
+      "name": "Ela",
+      "side": 2,
+      "img": "images/icons/ela.png"
+    },
+    {
+      "id": 48,
+      "name": "Vigil",
+      "side": 2,
+      "img": "images/icons/vigil.png"
+    },
+    {
+      "id": 49,
+      "name": "Maestro",
+      "side": 2,
+      "img": "images/icons/maestro.png"
+    },
+    {
+      "id": 50,
+      "name": "Alibi",
+      "side": 2,
+      "img": "images/icons/alibi.png"
+    },
+    {
+      "id": 51,
+      "name": "Clash",
+      "side": 2,
+      "img": "images/icons/clash.png"
+    },
+    {
+      "id": 52,
+      "name": "Kaid",
+      "side": 2,
+      "img": "images/icons/kaid.png"
+    },
+    {
+      "id": 53,
+      "name": "Mozzie",
+      "side": 2,
+      "img": "images/icons/mozzie.png"
+    },
+    {
+      "id": 54,
+      "name": "Warden",
+      "side": 2,
+      "img": "images/icons/warden.png"
+    },
+    {
+      "id": 55,
+      "name": "Goyo",
+      "side": 2,
+      "img": "images/icons/goyo.png"
+    },
+    {
+      "id": 56,
+      "name": "Wamai",
+      "side": 2,
+      "img": "images/icons/wamai.png"
+    },
+    {
+      "id": 57,
+      "name": "Oryx",
+      "side": 2,
+      "img": "images/icons/oryx.png"
+    },
+    {
+      "id": 58,
+      "name": "Melusi",
+      "side": 2,
+      "img": "images/icons/melusi.png"
+    },
+    {
+      "id": 59,
+      "name": "Aruni",
+      "side": 2,
+      "img": "images/icons/aruni.png"
+    },
+    {
+      "id": 60,
+      "name": "ThunderBird",
+      "side": 2,
+      "img": "images/icons/thunderbird.png"
+    }
+  ],
+  "selectedOps": [
+    {
+      "id": 1,
+      "role": "test",
+      "operatorId": 1,
+      "strategiesId": 1,
+      "img": ""
+    },
+    {
+      "id": 2,
+      "role": "test",
+      "operatorId": 2,
+      "strategiesId": 1,
+      "img": ""
+    },
+    {
+      "id": 3,
+      "role": "test",
+      "operatorId": 3,
+      "strategiesId": 1,
+      "img": ""
+    },
+    {
+      "id": 4,
+      "role": "test",
+      "operatorId": 4,
+      "strategiesId": 1,
+      "img": ""
+    },
+    {
+      "id": 5,
+      "role": "test",
+      "operatorId": 5,
+      "strategiesId": 1,
+      "img": ""
+    }
+  ]
 }
