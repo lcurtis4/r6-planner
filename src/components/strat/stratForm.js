@@ -122,7 +122,7 @@ export const StratForm = () => {
                 siteId: strategy.siteId,
                 sideId: strategy.sideId,
                 userId: parseInt(strategy.userId)
-            }).then(() => history.push("/strategies"))
+            }).then(() => history.push("/"))
         }
     }
 
