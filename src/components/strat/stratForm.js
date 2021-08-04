@@ -25,7 +25,6 @@ export const StratForm = () => {
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
 
-    const [isLoading, setIsLoading] = useState(true)
     const { strategyId } = useParams()
     const history = useHistory(); 
     
@@ -102,8 +101,6 @@ export const StratForm = () => {
         event.preventDefault() 
         if (strategy.mapId === "" || strategy.sideId === "" || strategy.siteId === "" ) {
             window.alert("Please fill in all fields!")
-        } else { 
-            setIsLoading(true); 
         } if (strategyId){
             updateStrategy({
                 id: strategyId,
@@ -178,7 +175,7 @@ export const StratForm = () => {
                         
                 </div>
                 <div className="saveButton">
-                    <button type="radio" className="saveButton" id="save" onClick={handleSaveStrat, handleSelectedOp}>Save Strategy</button>
+                    <button type="radio" className="saveButton" id="save" onClick={handleSaveStrat}>Save Strategy</button>
                 </div>
         </>
     )

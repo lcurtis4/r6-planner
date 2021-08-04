@@ -631,35 +631,35 @@
   "selectedOps": [
     {
       "id": 1,
-      "role": "",
+      "role": "test",
       "operatorId": 1,
       "strategiesId": 1,
       "img": ""
     },
     {
       "id": 2,
-      "role": "",
+      "role": "test",
       "operatorId": 2,
       "strategiesId": 1,
       "img": ""
     },
     {
       "id": 3,
-      "role": "",
+      "role": "test",
       "operatorId": 3,
       "strategiesId": 1,
       "img": ""
     },
     {
       "id": 4,
-      "role": "",
+      "role": "test",
       "operatorId": 4,
       "strategiesId": 1,
       "img": ""
     },
     {
       "id": 5,
-      "role": "",
+      "role": "test",
       "operatorId": 5,
       "strategiesId": 1,
       "img": ""
