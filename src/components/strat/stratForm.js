@@ -24,7 +24,6 @@ export const StratForm = () => {
     const [selectedOps, setSelectedOps] = useState([])
     const [opRole, setOpRole] = useState("")
     const newOpRole = { ...opRole}
-    console.log(selectedOps)
     selectedOps.forEach(function (selection) {
         selection.role = opRole
     })
@@ -98,10 +97,8 @@ export const StratForm = () => {
     }
 
     const handleControlledInputChange = (event) => {
-        console.log(opRole)
         let opRoleText = event.target.value 
         
-        //console.log(selectedVal)
             setOpRole(opRoleText)
     }
 
@@ -184,7 +181,6 @@ export const StratForm = () => {
                 <div className="roleDescription" >
                     <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
                     {selectedOps.map(o => {
-                        //console.log(o)
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />

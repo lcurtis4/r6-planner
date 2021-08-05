@@ -20,7 +20,6 @@ export const StratList = () => {
             <div className="strategiesList">
                 {
                     strategies.map(s => {
-                        console.log(strategies)
                         if (s.userId == sessionStorage.getItem("r6planner_user")) {
                             return <StratCard key={s.id} strategy={s}/>
                         }
