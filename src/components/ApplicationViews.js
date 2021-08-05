@@ -24,7 +24,7 @@ export const ApplicationViews = () => {
                             <StratList/>
                         </Route>
 
-                        <Route exact path="/strategy">
+                        <Route exact path="/strategy/:strategyId(\d+)">
                             <UserStrat/>
                         </Route>
 
