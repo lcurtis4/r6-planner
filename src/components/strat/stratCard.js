@@ -8,7 +8,7 @@ export const StratCard = ({ strategy }) => {
     return (
         <section className="strat">
             <section className="startList">
-                <h3 className="stratMap">{strategy.map?.name}:{strategy.site?.name}</h3>
+                <button type="radio" key={strategy.id} value={strategy.id} className="stratMap">{strategy.map?.name}:{strategy.site?.name}</button>
             </section>
         </section>
     )

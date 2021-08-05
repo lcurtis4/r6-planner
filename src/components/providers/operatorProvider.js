@@ -23,9 +23,20 @@ export const OperatorProvider = (props) => {
         .then(setSelectedOperators)
     }
 
+    const addSelectedOps = selectedOpsObj => {
+        return fetch("http://localhost:8088/selectedOps", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(selectedOpsObj)
+        })
+    
+    }
+
     return( 
         <OperatorContext.Provider value={{
-            operators, getOperators, getOperatorsById, selectedOperators, getSelectedOperators
+            operators, getOperators, getOperatorsById, selectedOperators, getSelectedOperators, addSelectedOps
         }}>
             {props.children}
         </OperatorContext.Provider>

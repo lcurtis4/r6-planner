@@ -11,7 +11,7 @@ export const StratForm = () => {
     const { getStrategies, addStrategy, updateStrategy} = useContext(StrategyContext)
     const { maps, getMaps } = useContext(MapContext)
     const { sites, getSites} = useContext(SiteContext)
-    const { operators, getOperators, getSelectedOperators } = useContext(OperatorContext)
+    const { operators, getOperators, getSelectedOperators, addSelectedOps } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "",  
@@ -22,9 +22,11 @@ export const StratForm = () => {
     const newStrategy = { ...strategy }
     
     const [selectedOps, setSelectedOps] = useState([])
+    const [opRole, setOpRole] = useState("")
+    const newOpRole = { ...opRole}
     console.log(selectedOps)
     selectedOps.forEach(function (selection) {
-        selection.role = "";
+        selection.role = opRole
     })
 
     const [foundMap, setFoundMap] = useState({})
@@ -42,6 +44,7 @@ export const StratForm = () => {
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
     
     const handleSelectedMap = (event) => {
         event.preventDefault()
@@ -95,11 +98,11 @@ export const StratForm = () => {
     }
 
     const handleControlledInputChange = (event) => {
+        console.log(opRole)
         let opRoleText = event.target.value 
         
         //console.log(selectedVal)
-            newSelectedOps[event.target.id] = opRoleText
-            setSelectedOps(newSelectedOps)
+            setOpRole(opRoleText)
     }
 
     const handleSaveStrat = (event) => {
@@ -114,15 +117,27 @@ export const StratForm = () => {
                 sideId: strategy.sideId,
                 userId: parseInt(strategy.userId)
             })
-            .then(() => history.push("/strategies"))
+            .then(() => history.push("/"))
         } else {
             addStrategy({
-                id: strategyId, 
                 mapId: strategy.mapId,
                 siteId: strategy.siteId,
                 sideId: strategy.sideId,
                 userId: parseInt(strategy.userId)
-            }).then(() => history.push("/"))
+            }).then((addedStrat) => {
+                const opsPromises = selectedOps.map(
+                    (op) => {
+                        let stratOp = {
+                            strategyId: addedStrat.id,
+                            role: op.role,
+                            operatorId: op.id
+                        }
+                       return addSelectedOps(stratOp)
+                    }
+                )
+                return Promise.all(opsPromises)
+            })
+            .then(() => history.push("/"))
         }
     }
 
@@ -169,7 +184,7 @@ export const StratForm = () => {
                 <div className="roleDescription" >
                     <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
                     {selectedOps.map(o => {
-                        console.log(o)
+                        //console.log(o)
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
@@ -180,7 +195,7 @@ export const StratForm = () => {
                         
                 </div>
                 <div className="saveButton">
-                    <button type="radio" className="saveButton" id="save" onClick={() => {history.push("/")}, handleSaveStrat}>Save Strategy</button>
+                    <button type="radio" className="saveButton" id="save" onClick={handleSaveStrat}>Save Strategy</button>
                 </div>
         </>
     )

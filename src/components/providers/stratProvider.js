@@ -11,10 +11,10 @@ export const StrategyProvider = (props) => {
         .then(setStrategies)
     }
     const getStrategiesById = (id) => {
-            return fetch(`http://localhost:8088/strategies/${id}`)
-            .then(res => res.json())
+        return fetch(`http://localhost:8088/strategies/${id}`)
+        .then(res => res.json())
     }
-
+    
     const addStrategy = strategyObj => {
         return fetch("http://localhost:8088/strategies", {
             method: "POST",
@@ -23,8 +23,11 @@ export const StrategyProvider = (props) => {
             },
             body: JSON.stringify(strategyObj)
         })
-        .then(getStrategies)
-    }
+        .then(res => res.json())
+        .then((newStrat) => {
+            getStrategies()
+            return newStrat
+    })}
 
     const deleteStrategy = strategyId => {
         return fetch(`http://localhost:8088/strategies/${strategyId}`, {

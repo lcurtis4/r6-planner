@@ -11,7 +11,6 @@ export const StratList = () => {
 
     useEffect(() => {
         getStrategies()
-        .then(getSelectedOperators)
     }, [])
 
     return (
