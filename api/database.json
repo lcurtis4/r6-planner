@@ -25,6 +25,55 @@
       "sideId": 2,
       "userId": 1,
       "id": 2
+    },
+    {
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 2,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "mapId": 2,
+      "siteId": 5,
+      "sideId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "mapId": "",
+      "siteId": "",
+      "sideId": 2,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "mapId": 3,
+      "siteId": 7,
+      "sideId": 1,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "mapId": 3,
+      "siteId": 7,
+      "sideId": 2,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "mapId": 5,
+      "siteId": 12,
+      "sideId": 1,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "mapId": 4,
+      "siteId": 10,
+      "sideId": 2,
+      "userId": 1,
+      "id": 9
     }
   ],
   "maps": [
@@ -633,36 +682,157 @@
       "id": 1,
       "role": "test",
       "operatorId": 1,
-      "strategiesId": 1,
-      "img": ""
+      "strategiesId": 1
     },
     {
       "id": 2,
       "role": "test",
       "operatorId": 2,
-      "strategiesId": 1,
-      "img": ""
+      "strategiesId": 1
     },
     {
       "id": 3,
       "role": "test",
       "operatorId": 3,
-      "strategiesId": 1,
-      "img": ""
+      "strategiesId": 1
     },
     {
       "id": 4,
       "role": "test",
       "operatorId": 4,
-      "strategiesId": 1,
-      "img": ""
+      "strategiesId": 1
     },
     {
       "id": 5,
       "role": "test",
       "operatorId": 5,
-      "strategiesId": 1,
-      "img": ""
+      "strategiesId": 1
+    },
+    {
+      "strategyId": 5,
+      "role": "werwer",
+      "operatorId": 35,
+      "id": 6
+    },
+    {
+      "strategyId": 5,
+      "role": "werwer",
+      "operatorId": 44,
+      "id": 7
+    },
+    {
+      "strategyId": 5,
+      "role": "werwer",
+      "operatorId": 45,
+      "id": 8
+    },
+    {
+      "strategyId": 6,
+      "role": "ewrwr",
+      "operatorId": 4,
+      "id": 9
+    },
+    {
+      "strategyId": 6,
+      "role": "ewrwr",
+      "operatorId": 5,
+      "id": 10
+    },
+    {
+      "strategyId": 6,
+      "role": "ewrwr",
+      "operatorId": 6,
+      "id": 11
+    },
+    {
+      "strategyId": 6,
+      "role": "ewrwr",
+      "operatorId": 7,
+      "id": 12
+    },
+    {
+      "strategyId": 7,
+      "role": "asdasd",
+      "operatorId": 35,
+      "id": 13
+    },
+    {
+      "strategyId": 7,
+      "role": "asdasd",
+      "operatorId": 44,
+      "id": 14
+    },
+    {
+      "strategyId": 7,
+      "role": "asdasd",
+      "operatorId": 53,
+      "id": 15
+    },
+    {
+      "strategyId": 7,
+      "role": "asdasd",
+      "operatorId": 43,
+      "id": 16
+    },
+    {
+      "strategyId": 8,
+      "role": "wsasda",
+      "operatorId": 14,
+      "id": 17
+    },
+    {
+      "strategyId": 8,
+      "role": "wsasda",
+      "operatorId": 15,
+      "id": 18
+    },
+    {
+      "strategyId": 8,
+      "role": "wsasda",
+      "operatorId": 16,
+      "id": 19
+    },
+    {
+      "strategyId": 8,
+      "role": "wsasda",
+      "operatorId": 17,
+      "id": 20
+    },
+    {
+      "strategyId": 8,
+      "role": "wsasda",
+      "operatorId": 8,
+      "id": 21
+    },
+    {
+      "strategyId": 9,
+      "role": "qweqwe",
+      "operatorId": 31,
+      "id": 22
+    },
+    {
+      "strategyId": 9,
+      "role": "qweqwe",
+      "operatorId": 40,
+      "id": 23
+    },
+    {
+      "strategyId": 9,
+      "role": "qweqwe",
+      "operatorId": 58,
+      "id": 24
+    },
+    {
+      "strategyId": 9,
+      "role": "qweqwe",
+      "operatorId": 49,
+      "id": 25
+    },
+    {
+      "strategyId": 9,
+      "role": "qweqwe",
+      "operatorId": 50,
+      "id": 26
     }
   ]
 }
