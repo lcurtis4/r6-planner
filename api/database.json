@@ -18,6 +18,27 @@
       "siteId": 1,
       "sideId": 1,
       "userId": 1
+    },
+    {
+      "mapId": 1,
+      "siteId": 1,
+      "sideId": 1,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "mapId": 3,
+      "siteId": 7,
+      "sideId": 2,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 2,
+      "userId": 1,
+      "id": 4
     }
   ],
   "maps": [
@@ -627,6 +648,12 @@
       "role": "test",
       "operatorId": 1,
       "strategiesId": 1
+    },
+    {
+      "strategyId": 4,
+      "role": "",
+      "operatorId": 34,
+      "id": 2
     }
   ]
 }

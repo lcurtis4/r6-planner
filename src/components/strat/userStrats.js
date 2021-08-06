@@ -33,7 +33,7 @@ export const UserStrat = () => {
                             return (
                             <div className="selectedOps">
                                 <h3 className="selectedOpRole">{o.role}</h3>
-                                {<img src={o.operator.img} atl="opIcon" key={o.id} className="opIcon"></img>}
+                                {<img src={o.operator.img} alt="opIcon" key={o.id} className="opIcon"></img>}
                             </div>
                             )
                         }
