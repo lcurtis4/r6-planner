@@ -18,13 +18,6 @@
       "siteId": 1,
       "sideId": 1,
       "userId": 1
-    },
-    {
-      "mapId": 2,
-      "siteId": 4,
-      "sideId": 2,
-      "userId": 1,
-      "id": 2
     }
   ],
   "maps": [
@@ -634,66 +627,6 @@
       "role": "test",
       "operatorId": 1,
       "strategiesId": 1
-    },
-    {
-      "id": 2,
-      "role": "test",
-      "operatorId": 2,
-      "strategiesId": 1
-    },
-    {
-      "id": 3,
-      "role": "test",
-      "operatorId": 3,
-      "strategiesId": 1
-    },
-    {
-      "id": 4,
-      "role": "test",
-      "operatorId": 4,
-      "strategiesId": 1
-    },
-    {
-      "id": 5,
-      "role": "test",
-      "operatorId": 5,
-      "strategiesId": 1
-    },
-    {
-      "strategyId": 2,
-      "role": "qwe",
-      "operatorId": 34,
-      "id": 6
-    },
-    {
-      "strategyId": 2,
-      "role": "qwe",
-      "operatorId": 43,
-      "id": 7
-    },
-    {
-      "strategyId": 2,
-      "role": "qwe",
-      "operatorId": 42,
-      "id": 8
-    },
-    {
-      "strategyId": 2,
-      "role": "qwe",
-      "operatorId": 33,
-      "id": 9
-    },
-    {
-      "strategyId": 2,
-      "role": "qwe",
-      "operatorId": 51,
-      "id": 10
-    },
-    {
-      "strategyId": 3,
-      "role": "try me hoe",
-      "operatorId": 4,
-      "id": 11
     }
   ]
 }
