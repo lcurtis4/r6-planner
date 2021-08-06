@@ -20,25 +20,53 @@
       "userId": 1
     },
     {
-      "mapId": 1,
-      "siteId": 1,
-      "sideId": 1,
+      "mapId": 5,
+      "siteId": 12,
+      "sideId": 2,
       "userId": 1,
       "id": 2
     },
     {
-      "mapId": 3,
-      "siteId": 7,
-      "sideId": 2,
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 1,
       "userId": 1,
       "id": 3
+    },
+    {
+      "mapId": 3,
+      "siteId": 7,
+      "sideId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 1,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "mapId": 1,
+      "siteId": 2,
+      "sideId": 1,
+      "userId": 1,
+      "id": 6
     },
     {
       "mapId": 2,
       "siteId": 4,
       "sideId": 2,
       "userId": 1,
-      "id": 4
+      "id": 7
+    },
+    {
+      "mapId": 3,
+      "siteId": 7,
+      "sideId": 2,
+      "userId": 1,
+      "id": 8
     }
   ],
   "maps": [
@@ -650,10 +678,160 @@
       "strategiesId": 1
     },
     {
-      "strategyId": 4,
-      "role": "",
+      "strategyId": 2,
+      "role": "no breaches for you",
       "operatorId": 34,
       "id": 2
+    },
+    {
+      "strategyId": 2,
+      "role": "no breaches for you",
+      "operatorId": 33,
+      "id": 3
+    },
+    {
+      "strategyId": 2,
+      "role": "no breaches for you",
+      "operatorId": 42,
+      "id": 4
+    },
+    {
+      "strategyId": 2,
+      "role": "no breaches for you",
+      "operatorId": 43,
+      "id": 5
+    },
+    {
+      "strategyId": 2,
+      "role": "no breaches for you",
+      "operatorId": 52,
+      "id": 6
+    },
+    {
+      "strategyId": 3,
+      "role": "g",
+      "operatorId": 1,
+      "id": 7
+    },
+    {
+      "strategyId": 3,
+      "role": "g",
+      "operatorId": 10,
+      "id": 8
+    },
+    {
+      "strategyId": 3,
+      "role": "g",
+      "operatorId": 19,
+      "id": 9
+    },
+    {
+      "strategyId": 3,
+      "role": "g",
+      "operatorId": 28,
+      "id": 10
+    },
+    {
+      "strategyId": 3,
+      "role": "g",
+      "operatorId": 29,
+      "id": 11
+    },
+    {
+      "strategyId": 4,
+      "role": "asdf",
+      "operatorId": 4,
+      "id": 12
+    },
+    {
+      "strategyId": 4,
+      "role": "asdf",
+      "operatorId": 5,
+      "id": 13
+    },
+    {
+      "strategyId": 5,
+      "role": "c",
+      "operatorId": 4,
+      "id": 14
+    },
+    {
+      "strategyId": 5,
+      "role": "c",
+      "operatorId": 3,
+      "id": 15
+    },
+    {
+      "strategyId": 5,
+      "role": "c",
+      "operatorId": 12,
+      "id": 16
+    },
+    {
+      "strategyId": 6,
+      "role": "bryan",
+      "operatorId": 23,
+      "id": 17
+    },
+    {
+      "strategyId": 7,
+      "role": "test",
+      "operatorId": 33,
+      "id": 18
+    },
+    {
+      "strategyId": 7,
+      "role": "test",
+      "operatorId": 34,
+      "id": 19
+    },
+    {
+      "strategyId": 7,
+      "role": "test",
+      "operatorId": 42,
+      "id": 20
+    },
+    {
+      "strategyId": 7,
+      "role": "test",
+      "operatorId": 51,
+      "id": 21
+    },
+    {
+      "strategyId": 7,
+      "role": "test",
+      "operatorId": 52,
+      "id": 22
+    },
+    {
+      "strategyId": 8,
+      "role": "test",
+      "operatorId": 31,
+      "id": 23
+    },
+    {
+      "strategyId": 8,
+      "role": "test",
+      "operatorId": 32,
+      "id": 24
+    },
+    {
+      "strategyId": 8,
+      "role": "test",
+      "operatorId": 33,
+      "id": 25
+    },
+    {
+      "strategyId": 8,
+      "role": "test",
+      "operatorId": 34,
+      "id": 26
+    },
+    {
+      "strategyId": 8,
+      "role": "test",
+      "operatorId": 35,
+      "id": 27
     }
   ]
 }
