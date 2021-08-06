@@ -129,7 +129,7 @@ export const StratForm = () => {
                             role: op.role,
                             operatorId: op.id
                         }
-                       return addSelectedOps(stratOp)
+                        return addSelectedOps(stratOp)
                     }
                 )
                 return Promise.all(opsPromises)

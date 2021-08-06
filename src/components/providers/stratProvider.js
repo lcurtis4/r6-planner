@@ -11,7 +11,7 @@ export const StrategyProvider = (props) => {
         .then(setStrategies)
     }
     const getStrategiesById = (id) => {
-        return fetch(`http://localhost:8088/strategies/${id}`)
+        return fetch(`http://localhost:8088/strategies/${id}?_expand=map&_expand=site`)
         .then(res => res.json())
     }
     

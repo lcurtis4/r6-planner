@@ -18,7 +18,7 @@ export const OperatorProvider = (props) => {
     }
 
     const getSelectedOperators = (id) => {
-        return fetch("http://localhost:8088/selectedOps") 
+        return fetch("http://localhost:8088/selectedOps?_expand=operator") 
         .then(res => res.json())
         .then(setSelectedOperators)
     }

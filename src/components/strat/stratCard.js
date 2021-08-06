@@ -1,5 +1,6 @@
 import React from "react"
 import { useHistory } from "react-router"
+import { Link } from "react-router-dom"
 
 export const StratCard = ({ strategy }) => {
     
@@ -8,7 +9,7 @@ export const StratCard = ({ strategy }) => {
     return (
         <section className="strat">
             <section className="startList">
-                <button type="radio" key={strategy.id} value={strategy.id} className="stratMap">{strategy.map?.name}:{strategy.site?.name}</button>
+                <Link to={`/strategy/${strategy.id}`}>{strategy.map.name}: {strategy.site.name}</Link>
             </section>
         </section>
     )
