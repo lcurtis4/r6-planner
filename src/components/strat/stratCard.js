@@ -9,7 +9,7 @@ export const StratCard = ({ strategy }) => {
     return (
         <section className="strat">
             <section className="startList">
-                <Link to={`/strategy/${strategy.id}`}>{strategy.map.name}</Link>
+                <Link to={`/strategy/${strategy.id}`}>{strategy.map.name}: {strategy.site.name}</Link>
             </section>
         </section>
     )
