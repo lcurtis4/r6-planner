@@ -7,6 +7,9 @@
         position: fixed;
         top: 28%;
         padding-left: 2em;
+        background-color: grey;
+        opacity: 80;
+        justify-content: center;
     }
 
     .mapName {
