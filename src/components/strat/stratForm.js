@@ -11,7 +11,7 @@ export const StratForm = () => {
     const { getStrategies, addStrategy, updateStrategy} = useContext(StrategyContext)
     const { maps, getMaps } = useContext(MapContext)
     const { sites, getSites} = useContext(SiteContext)
-    const { operators, getOperators, getSelectedOperators, addSelectedOps, getOperatorsById } = useContext(OperatorContext)
+    const { operators, getOperators, getSelectedOperators, addSelectedOps } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "",  
@@ -192,7 +192,6 @@ export const StratForm = () => {
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
                             <input type="text" value={selectedOps[index]?.role} id={index} className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
-                            <button type="radio" >Confirm Role</button>
                         </div>
                         )
                     })}

@@ -7,7 +7,6 @@ import "./list.css"
 
 export const StratList = () => {
     const { strategies, getStrategies } = useContext(StrategyContext)
-    const { selectedOperators, getSelectedOperators } = useContext(OperatorContext)
     const history = useHistory()
 
     useEffect(() => {
