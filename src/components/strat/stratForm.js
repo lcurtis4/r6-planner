@@ -22,15 +22,10 @@ export const StratForm = () => {
     const newStrategy = { ...strategy }
     
     const [selectedOps, setSelectedOps] = useState([])
-    const [opRole, setOpRole] = useState("")
-    const newOpRole = { ...opRole}
-    selectedOps.forEach(function (selection) {
-        selection.role = opRole
-    })
-
+    
     const [foundMap, setFoundMap] = useState({})
     const [foundSite, setFoundSite] = useState({})
-
+    
     const { strategyId } = useParams()
     const history = useHistory(); 
     
@@ -43,7 +38,7 @@ export const StratForm = () => {
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+    
     
     const handleSelectedMap = (event) => {
         event.preventDefault()
@@ -83,25 +78,27 @@ export const StratForm = () => {
         newStrategy[event.target.id] = selectedSide
         setStrategies(newStrategy)
     }
-
-    const newSelectedOps = [...selectedOps]
-
+    
+    
     const handleSelectedOp = event => {
+        const newSelectedOps = [...selectedOps]
         let selectedOp = parseInt(event.target.id)
         
         const foundOp = operators.find(o => selectedOp === o.id)
-
+        
         newSelectedOps.push(foundOp)
-
+        
         setSelectedOps(newSelectedOps)
     }
-
+    
     const handleControlledInputChange = (event) => {
+        const newSelectedOps = [ ...selectedOps]
         let opRoleText = event.target.value 
+        newSelectedOps[event.target.id].role = opRoleText
         
-            setOpRole(opRoleText)
+        setSelectedOps(newSelectedOps)
     }
-
+    
     const handleSaveStrat = (event) => {
         event.preventDefault() 
         if (strategy.mapId === "" || strategy.sideId === "" || strategy.siteId === "" ) {
@@ -122,6 +119,7 @@ export const StratForm = () => {
                 sideId: strategy.sideId,
                 userId: parseInt(strategy.userId)
             }).then((addedStrat) => {
+                debugger
                 const opsPromises = selectedOps.map(
                     (op) => {
                         let stratOp = {
@@ -193,7 +191,7 @@ export const StratForm = () => {
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
-                            <input type="text" id={selectedOps[index].role}  className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
+                            <input type="text" value={selectedOps[index]?.role} id={index} className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
                             <button type="radio" >Confirm Role</button>
                         </div>
                         )
