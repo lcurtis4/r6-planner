@@ -1,0 +1,15 @@
+.h3 {
+    text-align: center;
+}
+
+.selectedOpsCollection {
+        width: 650px;
+        position: fixed;
+        top: 28%;
+        padding-left: 2em;
+    }
+
+    .mapName {
+        text-align: center;
+        font-size: 45px;
+    }

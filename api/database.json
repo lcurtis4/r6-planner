@@ -46,6 +46,13 @@
       "sideId": 2,
       "userId": 1,
       "id": 5
+    },
+    {
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 2,
+      "userId": 1,
+      "id": 6
     }
   ],
   "maps": [
@@ -751,6 +758,36 @@
       "role": "",
       "operatorId": 46,
       "id": 17
+    },
+    {
+      "strategyId": 6,
+      "role": "testt",
+      "operatorId": 35,
+      "id": 18
+    },
+    {
+      "strategyId": 6,
+      "role": "testt",
+      "operatorId": 36,
+      "id": 19
+    },
+    {
+      "strategyId": 6,
+      "role": "testt",
+      "operatorId": 45,
+      "id": 20
+    },
+    {
+      "strategyId": 6,
+      "role": "testt",
+      "operatorId": 44,
+      "id": 21
+    },
+    {
+      "strategyId": 6,
+      "role": "testt",
+      "operatorId": 53,
+      "id": 22
     }
   ]
 }

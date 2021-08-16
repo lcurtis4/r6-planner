@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { StrategyContext } from "../providers/stratProvider"
 import { OperatorContext } from "../providers/operatorProvider"
+import "./saved.css"
 
 
 export const UserStrat = (props) => {
@@ -30,8 +31,8 @@ export const UserStrat = (props) => {
                         if (o.strategyId === parseInt(strategyId)) {
                             return (
                             <div className="selectedOps" key={o.id}>
-                                <h3 className="selectedOpRole">{o.role}</h3>
                                 {<img src={o.operator.img} alt="opIcon"  className="opIcon"></img>}
+                                <h3 className="selectedOpRole">{o.role}</h3>
                             </div>
                             )
                         }
