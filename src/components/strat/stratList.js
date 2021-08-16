@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { OperatorContext } from "../providers/operatorProvider";
 import { StrategyContext } from "../providers/stratProvider";
 import { StratCard } from "./stratCard";
+import "./list.css"
 
 export const StratList = () => {
     const { strategies, getStrategies } = useContext(StrategyContext)
@@ -15,7 +16,9 @@ export const StratList = () => {
 
     return (
         <>
-            <h2>Strategies</h2>
+            <div className="stratTitle">
+                <h2>Strategies</h2>
+            </div>
             <button className="newStratButton" onClick={() => {history.push("/form")}}>Create New Strategy</button>
             <div className="strategiesList">
                 {

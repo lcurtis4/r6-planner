@@ -18,6 +18,34 @@
       "siteId": 1,
       "sideId": 1,
       "userId": 1
+    },
+    {
+      "mapId": 7,
+      "siteId": 19,
+      "sideId": 2,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "mapId": 6,
+      "siteId": 17,
+      "sideId": 1,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "mapId": 10,
+      "siteId": 26,
+      "sideId": 1,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "mapId": 2,
+      "siteId": 4,
+      "sideId": 2,
+      "userId": 1,
+      "id": 5
     }
   ],
   "maps": [
@@ -627,6 +655,102 @@
       "role": "test",
       "operatorId": 1,
       "strategiesId": 1
+    },
+    {
+      "strategyId": 2,
+      "role": "test",
+      "operatorId": 31,
+      "id": 2
+    },
+    {
+      "strategyId": 2,
+      "role": "test",
+      "operatorId": 40,
+      "id": 3
+    },
+    {
+      "strategyId": 2,
+      "role": "test",
+      "operatorId": 49,
+      "id": 4
+    },
+    {
+      "strategyId": 2,
+      "role": "test",
+      "operatorId": 58,
+      "id": 5
+    },
+    {
+      "strategyId": 2,
+      "role": "test",
+      "operatorId": 59,
+      "id": 6
+    },
+    {
+      "strategyId": 3,
+      "role": "fly into piano and get fuzed immediately ",
+      "operatorId": 25,
+      "id": 7
+    },
+    {
+      "strategyId": 3,
+      "role": "fly into piano and get fuzed immediately ",
+      "operatorId": 28,
+      "id": 8
+    },
+    {
+      "strategyId": 3,
+      "role": "fly into piano and get fuzed immediately ",
+      "operatorId": 8,
+      "id": 9
+    },
+    {
+      "strategyId": 3,
+      "role": "fly into piano and get fuzed immediately ",
+      "operatorId": 13,
+      "id": 10
+    },
+    {
+      "strategyId": 3,
+      "role": "fly into piano and get fuzed immediately ",
+      "operatorId": 6,
+      "id": 11
+    },
+    {
+      "strategyId": 4,
+      "role": "",
+      "operatorId": 13,
+      "id": 12
+    },
+    {
+      "strategyId": 5,
+      "role": "",
+      "operatorId": 35,
+      "id": 13
+    },
+    {
+      "strategyId": 5,
+      "role": "",
+      "operatorId": 36,
+      "id": 14
+    },
+    {
+      "strategyId": 5,
+      "role": "",
+      "operatorId": 37,
+      "id": 15
+    },
+    {
+      "strategyId": 5,
+      "role": "",
+      "operatorId": 38,
+      "id": 16
+    },
+    {
+      "strategyId": 5,
+      "role": "",
+      "operatorId": 46,
+      "id": 17
     }
   ]
 }

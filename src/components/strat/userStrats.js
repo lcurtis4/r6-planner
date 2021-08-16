@@ -4,13 +4,11 @@ import { StrategyContext } from "../providers/stratProvider"
 import { OperatorContext } from "../providers/operatorProvider"
 
 
-export const UserStrat = () => {
+export const UserStrat = (props) => {
     const { getStrategiesById } = useContext(StrategyContext)
     const { getSelectedOperators, selectedOperators } = useContext(OperatorContext)
 
         const [strategy, setStrategy] = useState({})
-        console.log(selectedOperators)
-        console.log(strategy)
 
         const  {strategyId} = useParams()
 
@@ -29,11 +27,11 @@ export const UserStrat = () => {
                 <div className="selectedOps">
                 <label className="selectedOpsCollection" htmlFor="selectedOps">
                     {selectedOperators.map(o => {
-                        if (o.strategiesId === strategy.id) {
+                        if (o.strategyId === parseInt(strategyId)) {
                             return (
-                            <div className="selectedOps">
+                            <div className="selectedOps" key={o.id}>
                                 <h3 className="selectedOpRole">{o.role}</h3>
-                                {<img src={o.operator.img} atl="opIcon" key={o.id} className="opIcon"></img>}
+                                {<img src={o.operator.img} alt="opIcon"  className="opIcon"></img>}
                             </div>
                             )
                         }

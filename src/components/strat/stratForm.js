@@ -11,7 +11,7 @@ export const StratForm = () => {
     const { getStrategies, addStrategy, updateStrategy} = useContext(StrategyContext)
     const { maps, getMaps } = useContext(MapContext)
     const { sites, getSites} = useContext(SiteContext)
-    const { operators, getOperators, getSelectedOperators, addSelectedOps } = useContext(OperatorContext)
+    const { operators, getOperators, getSelectedOperators, addSelectedOps, getOperatorsById } = useContext(OperatorContext)
 
     const [strategy, setStrategies] = useState({
         mapId: "",  
@@ -138,6 +138,15 @@ export const StratForm = () => {
         }
     }
 
+    // const handleConfirmOpRole = (event) => {}
+    // event.preventDefault()
+    // addSelectedOps({
+    //     role: role,
+    //     operatorId: operatorId,
+    //     strategyId: strategyId
+    // })
+    
+
     return (
         <>
             <h2 className="strategyFormTitle">New Strategy</h2>
@@ -180,11 +189,12 @@ export const StratForm = () => {
                 </div>
                 <div className="roleDescription" >
                     <label className="operatorRoleDescriptionText" htmlFor="roleDescription">4. Describe Each Selected Operators Role:</label>
-                    {selectedOps.map(o => {
+                    {selectedOps.map((o, index) => {
                         return (
                         <div key={o.id} className="operatorRole">
                             <img src={o.img} alt="" className="opIcon" />
-                            <input type="text" id={selectedOps.role}  className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
+                            <input type="text" id={selectedOps[index].role}  className="roleText" placeholder="Insert Operator Role Description here" onChange={handleControlledInputChange} />
+                            <button type="radio" >Confirm Role</button>
                         </div>
                         )
                     })}
@@ -196,3 +206,4 @@ export const StratForm = () => {
         </>
     )
 }
+
