@@ -9,11 +9,8 @@ export const UserStrat = (props) => {
     const { getSelectedOperators, selectedOperators } = useContext(OperatorContext)
 
         const [strategy, setStrategy] = useState({})
-        // console.log(selectedOperators)
-        // console.log(strategy)
 
         const  {strategyId} = useParams()
-        console.log(strategyId)
 
     useEffect(() => {
         getStrategiesById(parseInt(strategyId))
@@ -31,7 +28,6 @@ export const UserStrat = (props) => {
                 <label className="selectedOpsCollection" htmlFor="selectedOps">
                     {selectedOperators.map(o => {
                         if (o.strategyId === parseInt(strategyId)) {
-                            console.log(o)
                             return (
                             <div className="selectedOps" key={o.id}>
                                 <h3 className="selectedOpRole">{o.role}</h3>

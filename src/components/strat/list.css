@@ -1,0 +1,38 @@
+body {
+    background-image: url("https://www.pcgamesn.com/wp-content/uploads/2021/04/rainbow-six-siege-north-star.jpg");
+}
+
+.strategiesList {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.stratTitle {
+    margin: auto;
+    width: 50%;
+    padding-top: 10em;
+    text-align: center;
+    font-size: 25px;
+}
+
+.newStratButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #008CBA;
+    padding: 12px 28px;
+    transition-duration: 0.4s;
+}
+
+.newStratButton:hover {
+    background-color: yellow;
+    color: black
+}

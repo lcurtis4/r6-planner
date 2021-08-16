@@ -9,8 +9,8 @@
     height: 400px;
     width: 650px;
     position: fixed;
-    top: 30%;
-    left: 50%;
+    top: 40%;
+    left: 60%;
 }
 
 .strategyFormTitle {
@@ -24,8 +24,8 @@
     height: 400px;
     width: 650px;
     position: fixed;
-    top: 20%;
-    left: 50%;
+    top: 35%;
+    left: 60%;
 }
 
 .operatorSelection {
@@ -62,7 +62,7 @@
 
 .roleDescription {
     position: fixed;
-    top: 45em;
+    top: 35em;
     padding-left: 10%
 }
 
